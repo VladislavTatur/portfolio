@@ -9,8 +9,8 @@ type ContainerProps = {
 }
 
 export const Container = styled.div<ContainerProps>`
-    max-width: ${props => props.width || "1196px"};
-    min-height: ${props => props.height || "100%"};
+    max-width: ${props => props.width || '1196px'};
+    min-height: ${props => props.height || '100%'};
     margin: 0 auto;
     position: relative;
     overflow: hidden;
