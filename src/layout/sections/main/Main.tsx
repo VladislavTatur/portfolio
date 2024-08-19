@@ -9,12 +9,12 @@ import {Headlines2} from '../../../components/headlines/Headlines2'
 
 export const Main = () => {
   return (
-    <Container width="100%">
-      <Container height="743px">
+    <Container width="100%" height={'100vh'}>
+      <Container>
         <Header/>
         <FlexWrapper direction="column">
           <MainTitle>
-           <Headlines2 title={<>Hello!<br/> I’m Vladislav Tatur</>} size={40} LHeight={108}/>
+            <Headlines2 title={<>Hello!<br/> I’m Vladislav Tatur</>} size={40} LHeight={108}/>
             <AboutMe>I am studying at the it-incubator for a web developer</AboutMe>
           </MainTitle>
         </FlexWrapper>

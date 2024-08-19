@@ -10,15 +10,16 @@ type ButtonProps = {
 
 export const Button = styled.button<ButtonProps>`
     border: none;
-    padding: ${props => props.padding || "0"};
-    background-color: ${props => props.background || "#676CDB"};
-    color: ${props => props.color || "#ffffff"};
+    padding: ${props => props.padding || '0'};
+    background-color: ${props => props.background || '#676CDB'};
+    color: ${props => props.color || '#ffffff'};
     width: ${props => props.width};
     height: ${props => props.height};
     font-size: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
+
     &:hover {
         cursor: pointer;
     }

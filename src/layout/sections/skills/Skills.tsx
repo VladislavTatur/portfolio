@@ -7,30 +7,21 @@ export const Skills = () => {
   return (
 
     <StyledSkills>
-
-
-
-        <Container height="200px">
-          <FlexWrapper justify={'space-around'} align="center">
+      <Container>
+        <FlexWrapper justify={'space-around'} align="center">
           <Skill iconId={'figma'}/>
           <Skill iconId={'html'}/>
           <Skill iconId={'css'}/>
           <Skill iconId={'sass'}/>
           <Skill iconId={'react'}/>
-          </FlexWrapper>
-        </Container>
-
-
-
+        </FlexWrapper>
+      </Container>
     </StyledSkills>
-
-
   )
 }
 
 
-const StyledSkills = styled.div`
-    min-height: 200px;
+const StyledSkills = styled.section`
     width: 100%;
     background-color: #000000;
 

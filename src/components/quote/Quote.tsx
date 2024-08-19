@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {Icon} from '../icon/Icon'
 
 type QuoteProps = {
   description: string
@@ -7,7 +8,7 @@ type QuoteProps = {
 export const Quote = (props: QuoteProps) => {
   return (
     <QuoteMan>
-      <QuotationMarks size={100}>“</QuotationMarks>
+      <Icon iconId="quote" width={47} height={77} viewBox={"0 0 47 77"}/>
       {props.description}
     </QuoteMan>
   )
@@ -15,11 +16,4 @@ export const Quote = (props: QuoteProps) => {
 
 const QuoteMan = styled.blockquote`
 
-`
-
-type QuotationMarksProps = {
-  size: number
-}
-const QuotationMarks = styled.span<QuotationMarksProps>`
-font-size: ${props => props.size}px;
 `

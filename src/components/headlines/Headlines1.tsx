@@ -13,7 +13,7 @@ export const Headlines1 = (props: Headlines1State) => {
     <H2 size={props.size}
         font={props.font}
         LHeight={props.LHeight}
-        title={"none"}>
+        title={'none'}>
       {props.title}
     </H2>
   )

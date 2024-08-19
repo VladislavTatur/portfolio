@@ -25,8 +25,9 @@ const StyledMenu = styled.nav`
         display: flex;
         gap: 40px;
     }
+
     ul li a {
         color: white;
     }
-    
+
 `
