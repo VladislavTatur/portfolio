@@ -15,8 +15,8 @@ export const About = () => {
             <Quote
               description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta finibus magna, a bibendum mi malesuada sed. Praesent felis lectus, fermentum eu condimentum nec, semper malesuada lorem. Curabitur rhoncus bibendum congue. Nulla rutrum tempor dictum. Morbi sit amet efficitur purus, vel varius ex. Nam convallis tristique gravida. Aenean non massa sed neque sodales congue et in leo. Fusce sit amet lectus viverra, pharetra augue in, pulvinar odio.'}/>
             <FlexWrapper>
-              <Icon iconId={'arrow-right'} viewBox={'0 0 40 40'} width={40} height={40}/>
-              <Icon iconId={'arrow-right'}/>
+              <Icon iconId={'arrow-right'} viewBox={'0 0 40 40'} width={40} height={40} transform={"180"}/>
+              <Icon iconId={'arrow-right'} width={40} height={40} viewBox={"0 0 40 40"}/>
             </FlexWrapper>
           </FlexWrapper>
           <FlexWrapper direction="column">

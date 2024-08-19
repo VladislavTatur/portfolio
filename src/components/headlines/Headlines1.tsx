@@ -5,6 +5,7 @@ type Headlines1State = {
   size: number
   font?: string
   LHeight: number
+  align?: string
 }
 
 export const Headlines1 = (props: Headlines1State) => {
@@ -18,7 +19,7 @@ export const Headlines1 = (props: Headlines1State) => {
   )
 }
 
-const H2 = styled.h2<Headlines1State>`
+const H2 = styled.h1<Headlines1State>`
     font-size: ${props => props.size}px;
     font-family: ${props => props.font};
     line-height: ${props => props.LHeight}px;

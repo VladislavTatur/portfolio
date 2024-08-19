@@ -4,9 +4,9 @@ import React from 'react'
 
 type Headlines2State = {
   title: string | React.ReactNode
-  size: number
+  size?: number
   font?: string
-  LHeight: number
+  LHeight?: number
   align?: string
 }
 
