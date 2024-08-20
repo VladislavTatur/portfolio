@@ -1,5 +1,5 @@
 import styled from 'styled-components'
 
-export const TextInBox = styled.p`
+export const ShortText = styled.span`
 
 `

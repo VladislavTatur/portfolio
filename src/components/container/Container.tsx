@@ -20,12 +20,12 @@ export const Container = styled.div<ContainerProps>`
 type FlexContainerProps = {
   direction?: string
   justify?: string
-  align?: string
+  alignI?: string
   wrap?: string
   width?: string
-  height?: string
   gap?: number
   textAlign?: string
+  alignC?: string
 }
 
 export const FlexContainer = styled(Container)<FlexContainerProps>`
@@ -34,7 +34,8 @@ export const FlexContainer = styled(Container)<FlexContainerProps>`
     display: flex;
     flex-direction: ${props => props.direction || "row"};
     justify-content: ${props => props.justify || "flex-start"};
-    align-items: ${props => props.align || "stretch"};
+    align-items: ${props => props.alignI || "stretch"};
+    align-content: ${props => props.alignC || "stretch"};
     flex-wrap: ${props => props.wrap || "nowrap"};
     gap: ${props => props.gap || "0"}px;
 `

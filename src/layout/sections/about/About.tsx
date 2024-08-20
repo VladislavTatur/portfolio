@@ -1,4 +1,4 @@
-import {Container, FlexContainer} from '../../../components/container/Container'
+import {FlexContainer} from '../../../components/container/Container'
 import styled from 'styled-components'
 import photo from '../../../assets/images/man.jpg'
 import {Icon} from '../../../components/icon/Icon'

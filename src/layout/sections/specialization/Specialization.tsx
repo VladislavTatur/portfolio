@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import {PaintingBox} from '../../../components/paintingbox/PaintingBox'
 import React from 'react'
 import {Icon} from '../../../components/icon/Icon'
-import {TextInBox} from '../../../components/paintingbox/TextInBox'
+import {ShortText} from '../../../components/Text/ShortText'
 import {Headlines1} from '../../../components/headlines/Headlines1'
 
 export const Specialization = () => {
@@ -18,15 +18,15 @@ export const Specialization = () => {
           <FlexWrapper gap={15}>
             <PaintingBox width={288} height={295} backgroundColor="rgba(103, 108, 219, 1)">
               <Icon iconId="computer"/>
-              <TextInBox>Front End Developer</TextInBox>
+              <ShortText>Front End Developer</ShortText>
             </PaintingBox>
             <PaintingBox width={288} height={295} backgroundColor="rgba(196, 196, 196, 1)">
               <Icon iconId="paint"/>
-              <TextInBox>UI/UX Designer</TextInBox>
+              <ShortText>UI/UX Designer</ShortText>
             </PaintingBox>
             <PaintingBox width={288} height={295} backgroundColor="rgba(196, 196, 196, 1)">
               <Icon iconId="lightning"/>
-              <TextInBox>Branding Designer</TextInBox>
+              <ShortText>Branding Designer</ShortText>
             </PaintingBox>
           </FlexWrapper>
         </FlexWrapper>

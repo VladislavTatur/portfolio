@@ -1,5 +1,4 @@
 import iconsSprite from '../../assets/images/icons/icons-sprite.svg'
-import styled from 'styled-components'
 
 type IconPropsType = {
   iconId: string,
