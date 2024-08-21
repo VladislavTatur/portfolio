@@ -5,15 +5,16 @@ type FlexWrapperProps = {
   justify?: string
   align?: string
   wrap?: string
-  width?: string
+  maxWidth?: string
   height?: string
   gap?: number
   textAlign?: string
+
 }
 
 export const FlexWrapper = styled.div<FlexWrapperProps>`
     text-align: ${props => props.textAlign};
-    width: ${props => props.width};
+    max-width: ${props => props.maxWidth};
     display: flex;
     flex-direction: ${props => props.direction || "row"};
     justify-content: ${props => props.justify || "flex-start"};

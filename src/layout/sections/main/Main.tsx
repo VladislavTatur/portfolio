@@ -3,7 +3,7 @@ import photo from '../../../assets/images/myPhoto.jpg'
 import {FlexWrapper} from '../../../components/FlexWrapper'
 import {Button} from '../../../components/button/Button'
 import {Icon} from '../../../components/icon/Icon'
-import {Container} from '../../../components/container/Container'
+import {Container, FlexContainer} from '../../../components/container/Container'
 import {Header} from '../../header/Header'
 import {Headlines2} from '../../../components/headlines/Headlines2'
 import {ShortText} from '../../../components/Text/ShortText'
@@ -15,35 +15,32 @@ export const Main = () => {
     <StyledMain>
       <Container>
         <Header/>
-        <Headlines2 padding={"100px 0 10px 0"} title={<>Hello!<br/> I’m Vladislav Tatur</>} size={90} LHeight={108}/>
-        <FlexWrapper direction="column">
-            <Text mWidth={"30%"} padding={"100px"}>I’am freelance <Link href={"#"}>web developer</Link>  based in Indonesia who loves to craft attractive design experiences for the web.</Text>
-        </FlexWrapper>
+        <FlexContainer direction={'column'}>
+          <Headlines2 padding={'100px 0 10px 0'} title={<>Hello!<br/> I’m Vladislav Tatur</>} size={90} LHeight={108}/>
+          <Text maxWidth="404px">I’am freelance <ShortText color={'#fff'}>web
+            developer</ShortText> based in Indonesia who loves to craft attractive design experiences for the
+            web.</Text>
+        </FlexContainer>
         <FlexWrapper align={'center'}>
           <Button background="#676CDB" width={'203px'} height={'64px'}>
-            <FlexWrapper align={"center"} justify={"center"} gap={10}>
-            <Icon iconId={'mail'} width={20} height={20} viewBox="0 0 20 20"/>
-            <ShortText>Mail Me</ShortText>
+            <FlexWrapper align={'center'} justify={'center'} gap={10}>
+              <Icon iconId={'mail'} width={20} height={20} viewBox="0 0 20 20"/>
+              <ShortText>Mail Me</ShortText>
             </FlexWrapper>
           </Button>
           <Button background="transparent" width={'201px'} height={'44px'}>
-            <FlexWrapper align={"center"} justify={"center"} gap={5}>
-            <Icon iconId={'download'} viewBox={'0 0 20 20'} width={20} height={20}/>
-            <ShortText>Download CV</ShortText>
-        </FlexWrapper>
+            <FlexWrapper align={'center'} justify={'center'} gap={5}>
+              <Icon iconId={'download'} viewBox={'0 0 20 20'} width={20} height={20}/>
+              <ShortText>Download CV</ShortText>
+            </FlexWrapper>
           </Button>
         </FlexWrapper>
       </Container>
-
       <MyPhoto src={photo} alt="My photo"/>
     </StyledMain>
   )
 }
 
-const Link = styled.a`
-        text-decoration: none;
-        color: #fff;
-`
 
 const MyPhoto = styled.img`
     width: 50%;
@@ -58,5 +55,6 @@ const MyPhoto = styled.img`
 `
 
 const StyledMain = styled.section`
-width: 100%;
-height: 100vh;`
+    width: 100%;
+    min-height: 100vh;
+`

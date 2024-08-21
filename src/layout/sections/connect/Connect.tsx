@@ -3,12 +3,14 @@ import {Headlines2} from '../../../components/headlines/Headlines2'
 import {Icon} from '../../../components/icon/Icon'
 import {FlexWrapper} from '../../../components/FlexWrapper'
 import styled from 'styled-components'
+import {Button} from '../../../components/button/Button'
+import {ShortText} from '../../../components/Text/ShortText'
 
 export const Connect = () => {
   return (
     <StyledConnect>
       <FlexContainer>
-        <FlexWrapper direction={'column'} width="50%">
+        <FlexWrapper direction={'column'} maxWidth="50%">
           <Headlines2 title="Let’s Connect" size={100}/>
           <FlexWrapper>
             <Icon iconId="dribble"/>
@@ -19,13 +21,17 @@ export const Connect = () => {
           </FlexWrapper>
         </FlexWrapper>
         <StyledMyForm action="">
-          <label>Your name:</label>
-          <input type="text"/>
-          <label>Your email address:</label>
-          <input type="email"/>
-          <label>Tell about the project:</label>
-          <input type="text"/>
-          <button type="submit">Send</button>
+          <AboutField>Your name:</AboutField>
+          <Field/>
+          <AboutField>Your email address:</AboutField>
+          <Field type="email"/>
+          <AboutField>Tell about the project:</AboutField>
+          <Field/>
+
+          <StyledButton type="submit" background="transparent"><ShortText fontSize={30}>Send</ShortText> <Icon
+            iconId={'arrow-right'} width={25} height={25} viewBox="0 0 35 35"/>
+          </StyledButton>
+
         </StyledMyForm>
       </FlexContainer>
     </StyledConnect>
@@ -36,6 +42,10 @@ const StyledConnect = styled.section`
     width: 100%;
     background-color: rgba(0, 0, 0, 1);
 `
+const StyledButton = styled(Button)`
+svg {
+    text-align: center;
+}`
 
 const StyledMyForm = styled.form`
     padding-left: 16.5%;
@@ -49,3 +59,7 @@ const StyledMyForm = styled.form`
         width: 100%;
     }
 `
+
+const Field = styled.input``
+
+const AboutField = styled.label``

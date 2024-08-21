@@ -1,10 +1,10 @@
 import './App.css'
 import {Main} from './layout/sections/main/Main'
 import {Skills} from './layout/sections/skills/Skills'
-import {About} from './layout/sections/about/About'
 import {Specialization} from './layout/sections/specialization/Specialization'
 import {Connect} from './layout/sections/connect/Connect'
 import {Footer} from './layout/footer/Footer'
+import {Statistics} from './layout/sections/statistics/Statistics'
 
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
       <Main/>
       <Skills/>
       <Specialization/>
-      <About/>
+      <Statistics/>
       <Connect/>
       <Footer/>
     </div>

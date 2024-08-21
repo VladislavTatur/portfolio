@@ -22,5 +22,5 @@ export const Headlines1 = (props: Headlines1State) => {
 const H2 = styled.h1<Headlines1State>`
     font-size: ${props => props.size}px;
     font-family: ${props => props.font};
-    line-height: ${props => props.LHeight}px;
+    line-height: ${props => props.LHeight}%;
 `
