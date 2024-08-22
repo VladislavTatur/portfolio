@@ -10,17 +10,18 @@ type Headlines1State = {
 
 export const Headlines1 = (props: Headlines1State) => {
   return (
-    <H2 size={props.size}
+    <H1 size={props.size}
         font={props.font}
         LHeight={props.LHeight}
         title={'none'}>
       {props.title}
-    </H2>
+    </H1>
   )
 }
 
-const H2 = styled.h1<Headlines1State>`
+const H1 = styled.h1<Headlines1State>`
     font-size: ${props => props.size}px;
     font-family: ${props => props.font};
     line-height: ${props => props.LHeight}%;
+    font-size: 2rem;
 `

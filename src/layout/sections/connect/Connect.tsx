@@ -1,4 +1,4 @@
-import {FlexContainer} from '../../../components/container/Container'
+import {Container, FlexContainer} from '../../../components/container/Container'
 import {Headlines2} from '../../../components/headlines/Headlines2'
 import {Icon} from '../../../components/icon/Icon'
 import {FlexWrapper} from '../../../components/FlexWrapper'
@@ -9,6 +9,7 @@ import {ShortText} from '../../../components/Text/ShortText'
 export const Connect = () => {
   return (
     <StyledConnect>
+      <Container>
       <FlexContainer>
         <FlexWrapper direction={'column'} maxWidth="50%">
           <Headlines2 title="Let’s Connect" size={100}/>
@@ -34,6 +35,7 @@ export const Connect = () => {
 
         </StyledMyForm>
       </FlexContainer>
+      </Container>
     </StyledConnect>
   )
 }

@@ -1,22 +1,20 @@
-import {FlexContainer} from '../../../components/container/Container'
+import {Container, FlexContainer} from '../../../components/container/Container'
 import styled from 'styled-components'
 import {PaintingBox} from '../../../components/paintingbox/PaintingBox'
 import React from 'react'
 import {Icon} from '../../../components/icon/Icon'
 import {ShortText} from '../../../components/Text/ShortText'
 import {Headlines1} from '../../../components/headlines/Headlines1'
-import {Text} from '../../../components/Text/Text'
-import {FlexWrapper} from '../../../components/FlexWrapper'
+import {InformationText} from '../../../components/Text/InformationText'
 
 export const Specialization = () => {
   return (
     <StyledSpecialization>
-      <FlexContainer>
-        <FlexContainer direction="column" maxWidth={"207px"} padding={"121px 0 0 0"}>
-          <ShortText fontSize={100} lineHeight={"180%"}>4 +</ShortText>
-          <Text fontSize={40}>Years Experience Working</Text>
-        </FlexContainer>
-        <FlexContainer direction={'column'} alignI="center" justify="center" textAlign="center" padding="100px 0">
+
+      <Container>
+        <FlexContainer >
+          <InformationText  maxHeight={336} maxWidth={207} text={"Years Experience Working"} data={"4 +"} lineHeight={180} sizeText={"2rem"} sizeData={"5rem"} reverseOrder={true}/>
+        <FlexContainer padding={"0 0 0 96px"} maxWidth="990px" direction={'column'} alignI="center" justify="center" textAlign="center" >
           <Headlines1 align="justify" title="Developer and Designer, specialized in UI/UX and Web Developer" size={40}
                       LHeight={180}/>
           <FlexContainer gap={15} padding={"20px 0 0 0"} wrap="wrap">
@@ -41,12 +39,14 @@ export const Specialization = () => {
           </PaintingBox>
           </FlexContainer>
         </FlexContainer>
-      </FlexContainer>
+        </FlexContainer>
+      </Container>
     </StyledSpecialization>
   )
 }
 
 const StyledSpecialization = styled.section`
-    width: 100%;;
+    width: 100%;
+    
 `
 

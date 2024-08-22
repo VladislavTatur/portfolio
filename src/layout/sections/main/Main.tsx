@@ -13,15 +13,15 @@ import {Text} from '../../../components/Text/Text'
 export const Main = () => {
   return (
     <StyledMain>
-      <Container>
         <Header/>
+        <Container>
         <FlexContainer direction={'column'}>
-          <Headlines2 padding={'100px 0 10px 0'} title={<>Hello!<br/> I’m Vladislav Tatur</>} size={90} LHeight={108}/>
+          <Headlines2 title={<>Hello!<br/> I’m Vladislav Tatur</>} size={90} LHeight={108}/>
           <Text maxWidth="404px">I’am freelance <ShortText color={'#fff'}>web
             developer</ShortText> based in Indonesia who loves to craft attractive design experiences for the
             web.</Text>
         </FlexContainer>
-        <FlexWrapper align={'center'}>
+        <FlexContainer alignI={'center'}>
           <Button background="#676CDB" width={'203px'} height={'64px'}>
             <FlexWrapper align={'center'} justify={'center'} gap={10}>
               <Icon iconId={'mail'} width={20} height={20} viewBox="0 0 20 20"/>
@@ -34,9 +34,9 @@ export const Main = () => {
               <ShortText>Download CV</ShortText>
             </FlexWrapper>
           </Button>
-        </FlexWrapper>
-      </Container>
+        </FlexContainer>
       <MyPhoto src={photo} alt="My photo"/>
+        </Container>
     </StyledMain>
   )
 }
@@ -58,3 +58,4 @@ const StyledMain = styled.section`
     width: 100%;
     min-height: 100vh;
 `
+

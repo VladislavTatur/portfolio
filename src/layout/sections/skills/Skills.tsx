@@ -1,11 +1,12 @@
 import styled from 'styled-components'
-import {FlexContainer} from '../../../components/container/Container'
+import {Container, FlexContainer} from '../../../components/container/Container'
 import {Skill} from './Skill/Skill'
 import React from 'react'
 
 export const Skills = () => {
   return (
     <StyledSkills>
+      <Container padding={"59px 130px"}>
       <FlexContainer alignI={'center'} justify={'space-between'} wrap={'wrap'}>
         <Skill iconId={'figma'}/>
         <Skill iconId={'html'}/>
@@ -13,6 +14,7 @@ export const Skills = () => {
         <Skill iconId={'sass'}/>
         <Skill iconId={'react'}/>
       </FlexContainer>
+      </Container>
     </StyledSkills>
   )
 }
@@ -21,5 +23,4 @@ export const Skills = () => {
 const StyledSkills = styled.section`
     width: 100%;
     background-color: #000000;
-    padding: 59px 0;
 `

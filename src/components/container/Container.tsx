@@ -1,23 +1,15 @@
 import styled from 'styled-components'
 
 type ContainerProps = {
-  maxWidth?: string
-  overflow?: string
-  position?: string
-  background?: string
-  height?: string
-  margin?: string
-  minWidth?: string
+  padding?: string
 }
 
 export const Container = styled.div<ContainerProps>`
-    min-height: ${props => props.height};
-    max-width: ${props => props.maxWidth || '1196px'};
-    min-width: ${props => props.minWidth};
-    margin: ${props => props.margin || '0 auto'};
+    max-width: 1441px;
+    margin: 0 auto;
+    padding: ${props => props.padding || "100px 122px"};
     //position: relative;
     //overflow: hidden;
-    background-color: ${props => props.background};
 `
 
 type FlexContainerProps = {
@@ -25,7 +17,7 @@ type FlexContainerProps = {
   justify?: string
   alignI?: string
   wrap?: string
-  width?: string
+  maxWidth?: string
   gap?: number
   textAlign?: string
   alignC?: string
@@ -33,9 +25,10 @@ type FlexContainerProps = {
   minHeight?: string
 }
 
-export const FlexContainer = styled(Container)<FlexContainerProps>`
+export const FlexContainer = styled.div<FlexContainerProps>`
     text-align: ${props => props.textAlign};
-    width: ${props => props.width};
+    
+    max-width: ${props => props.maxWidth};
     padding: ${props => props.padding};
     min-height: ${props => props.minHeight};
     display: flex;

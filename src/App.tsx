@@ -5,17 +5,21 @@ import {Specialization} from './layout/sections/specialization/Specialization'
 import {Connect} from './layout/sections/connect/Connect'
 import {Footer} from './layout/footer/Footer'
 import {Statistics} from './layout/sections/statistics/Statistics'
+import {Container} from './components/container/Container'
+import React from 'react'
 
 
 function App() {
   return (
     <div className="App">
-      <Main/>
-      <Skills/>
-      <Specialization/>
-      <Statistics/>
-      <Connect/>
-      <Footer/>
+
+        <Main/>
+        <Skills/>
+        <Specialization/>
+        <Statistics/>
+        <Connect/>
+        <Footer/>
+
     </div>
   )
 }
