@@ -11,6 +11,8 @@ export const Footer = () => {
 }
 
 const TextFooter = styled.span`
+    color: rgba(255, 255, 255, 0.5);
+
 `
 const StyledFooter = styled.div`
     width: 100%;

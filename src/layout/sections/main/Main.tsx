@@ -16,8 +16,8 @@ export const Main = () => {
         <Header/>
         <Container>
         <FlexContainer direction={'column'}>
-          <Headlines2 title={<>Hello!<br/> I’m Vladislav Tatur</>} size={90} LHeight={108}/>
-          <Text maxWidth="404px">I’am freelance <ShortText color={'#fff'}>web
+          <Headlines2 font="Playfair Display" title={<>Hello!<br/> I’m Vladislav Tatur</>} size={90} LHeight={108}/>
+          <Text fontWeight={400} maxWidth="404px">I’am freelance <ShortText color={'#fff'}>web
             developer</ShortText> based in Indonesia who loves to craft attractive design experiences for the
             web.</Text>
         </FlexContainer>
@@ -25,13 +25,13 @@ export const Main = () => {
           <Button background="#676CDB" width={'203px'} height={'64px'}>
             <FlexWrapper align={'center'} justify={'center'} gap={10}>
               <Icon iconId={'mail'} width={20} height={20} viewBox="0 0 20 20"/>
-              <ShortText>Mail Me</ShortText>
+              <ShortText fontWeight={400}>Mail Me</ShortText>
             </FlexWrapper>
           </Button>
           <Button background="transparent" width={'201px'} height={'44px'}>
             <FlexWrapper align={'center'} justify={'center'} gap={5}>
               <Icon iconId={'download'} viewBox={'0 0 20 20'} width={20} height={20}/>
-              <ShortText>Download CV</ShortText>
+              <ShortText fontWeight={400} textDecoration="underline">Download CV</ShortText>
             </FlexWrapper>
           </Button>
         </FlexContainer>

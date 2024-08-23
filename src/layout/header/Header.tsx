@@ -16,7 +16,7 @@ export const Header = () => {
       <Logo/>
       <Menu menuItems={menuItems}/>
       <Button background={"#676CDB"} padding={"10px 20px"}>
-        <ShortText>Contact Me</ShortText>
+        <ShortText fontWeight={400}>Contact Me</ShortText>
       </Button>
     </FlexWrapper>
     </StyledHeader>

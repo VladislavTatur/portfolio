@@ -9,11 +9,12 @@ type InformationTextProps = {
   reverseOrder?: boolean;
   maxWidth?: number
   maxHeight?: number
+  fontFamily?: string
 }
 
 export const InformationText = (props: InformationTextProps) => {
   return (
-    <StyledInformationText maxHeight={props.maxHeight} lineHeight={props.lineHeight} maxWidth={props.maxWidth}>
+    <StyledInformationText maxHeight={props.maxHeight} lineHeight={props.lineHeight} maxWidth={props.maxWidth} fontFamily={props.fontFamily}>
       {props.reverseOrder ? (
       <>
         <StyledText sizeText={props.sizeData}>
@@ -42,6 +43,8 @@ type StyledCustomerStatisticsProps = {
   maxWidth?: number
   padding?: string
   maxHeight?: number
+  font?: string
+  fontFamily?: string
 }
 
 const StyledInformationText = styled.div<StyledCustomerStatisticsProps>`
@@ -49,6 +52,8 @@ const StyledInformationText = styled.div<StyledCustomerStatisticsProps>`
     max-width: ${props => props.maxWidth}px;
     max-height: ${props => props.maxHeight}px;
     padding: ${props => props.padding};
+    font-size: ${props => props.font};
+    font-family: ${props => props.fontFamily || "Playfair Display"};
 `
 
 type StyledTextProps = {
@@ -65,4 +70,5 @@ type DataTextProps = {
 
 const DataText = styled.span<DataTextProps>`
     font-size: ${props => props.sizeData};
+    color: #676cdb;
 `

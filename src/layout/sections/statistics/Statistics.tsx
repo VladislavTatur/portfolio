@@ -13,9 +13,9 @@ export const Statistics = () => {
         <FlexWrapper>
           <Slider/>
           <FlexContainer direction={'column'}>
-            <InformationText sizeText="1.5rem" sizeData="2.5rem" lineHeight={120} text="Satisfaction Clients" data="100 %"/>
-            <InformationText sizeText="1.5rem" sizeData="2.5rem" lineHeight={120} text="Clients On Worldwide" data="+ 80"/>
-            <InformationText sizeText="1.5rem" sizeData="2.5rem" lineHeight={120} text="Projects Done" data="743"/>
+            <InformationText fontFamily="Playfair Display" sizeText="1.5rem" sizeData="2.5rem" lineHeight={120} text="Satisfaction Clients" data="100 %"/>
+            <InformationText fontFamily="Playfair Display" sizeText="1.5rem" sizeData="2.5rem" lineHeight={120} text="Clients On Worldwide" data="+ 80"/>
+            <InformationText fontFamily="Playfair Display" sizeText="1.5rem" sizeData="2.5rem" lineHeight={120} text="Projects Done" data="743"/>
           </FlexContainer>
         </FlexWrapper>
 

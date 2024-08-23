@@ -27,6 +27,6 @@ export const Headlines2 = ({title, LHeight, size, font, padding}: Headlines2Stat
 const H2 = styled.h2<Omit<Headlines2State, 'title'>>`
     font-size: ${({size}) => size}px;
     font-family: ${props => props.font};
-    line-height: ${props => props.LHeight}px;
+    line-height: ${props => props.LHeight}%;
     padding: ${props => props.padding};
 `
