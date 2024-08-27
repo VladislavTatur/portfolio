@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {theme} from '../../styles/Theme'
 
 export const Footer = () => {
   return (
@@ -10,13 +11,13 @@ export const Footer = () => {
   )
 }
 
-const TextFooter = styled.span`
-    color: rgba(255, 255, 255, 0.5);
+const TextFooter = styled.small`
+    color: ${theme.colors.textSelection};
 
 `
 const StyledFooter = styled.div`
     width: 100%;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: ${theme.colors.thirdBg};
     text-align: center;
     padding-bottom: 50px;
 `

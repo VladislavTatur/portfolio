@@ -5,11 +5,11 @@ type ContainerProps = {
 }
 
 export const Container = styled.div<ContainerProps>`
-    max-width: 1441px;
     margin: 0 auto;
-    padding: ${props => props.padding || "100px 122px"};
-    //position: relative;
-    //overflow: hidden;
+    padding: ${props => props.padding || "100px 15px"};
+    max-width: 1230px;
+    width: 100%;
+    min-height: 100%;
 `
 
 type FlexContainerProps = {
@@ -23,13 +23,14 @@ type FlexContainerProps = {
   alignC?: string
   padding?: string
   minHeight?: string
+  margin?: string
 }
 
 export const FlexContainer = styled.div<FlexContainerProps>`
     text-align: ${props => props.textAlign};
-    
     max-width: ${props => props.maxWidth};
     padding: ${props => props.padding};
+    margin: ${props => props.margin};
     min-height: ${props => props.minHeight};
     display: flex;
     flex-direction: ${props => props.direction || "row"};

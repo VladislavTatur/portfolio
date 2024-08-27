@@ -10,12 +10,12 @@ type ButtonProps = {
 }
 
 export const Button = styled.button<ButtonProps>`
-    border: none;
     padding: ${props => props.padding || '0'};
-    background-color: ${props => props.background || '#676CDB'};
+    background-color: ${props => props.background};
     color: ${props => props.color || '#ffffff'};
     width: ${props => props.width};
     height: ${props => props.height};
+    font-size: 20px;
     
     &:hover {
         cursor: pointer;

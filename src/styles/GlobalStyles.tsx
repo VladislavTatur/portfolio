@@ -1,19 +1,39 @@
 import {createGlobalStyle} from 'styled-components'
+import {theme} from './Theme'
 
 export const GlobalStyle = createGlobalStyle`
-    * {
+    *, 
+    *::before,
+    *::after {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        line-height: 180%;
-        font-family: 'Poppins', sans-serif;
-        font-size: 20px;
     }
     
     body {
-        background-color: #222A36;
-        color: #ffffff;
-        font-weight: 400;
-
+        background-color: ${theme.colors.primaryBg};
+        color: ${theme.colors.font};
+        font-weight: 700;
+        //line-height: 180%;
+        margin: 0;
+        font-family: "Poppins", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 20px;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    button {
+        background-color: unset;
+        border: unset;
     }
 `

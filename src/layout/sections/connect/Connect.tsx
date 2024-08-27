@@ -4,7 +4,7 @@ import {Icon} from '../../../components/icon/Icon'
 import {FlexWrapper} from '../../../components/FlexWrapper'
 import styled from 'styled-components'
 import {Button} from '../../../components/button/Button'
-import {ShortText} from '../../../components/Text/ShortText'
+import {theme} from '../../../styles/Theme'
 
 export const Connect = () => {
   return (
@@ -12,24 +12,44 @@ export const Connect = () => {
       <Container>
         <FlexContainer>
           <FlexWrapper direction={'column'} maxWidth="50%">
-            <Headlines2 title="Let’s Connect" size={100} LHeight={120}/>
+            <Headlines2 title="Let’s Connect" size={100}/>
             <FlexContainer padding={'31px 0 0 0'}>
-              <Icon iconId="dribble"/>
-              <Icon iconId="upwork"/>
-              <Icon iconId="linkedin"/>
-              <Icon iconId="github"/>
-              <Icon iconId="youtube"/>
+              <SocialList>
+                <SocialItem>
+                  <SocialLink href="#"><Icon iconId="dribble" width={25} height={25} viewBox={'0 0 25 25'}/></SocialLink>
+                </SocialItem>
+                <SocialItem>
+                  <SocialLink href="#"><Icon iconId="upwork" width={25} height={25} viewBox={'0 0 25 25'}/></SocialLink>
+                </SocialItem>
+                <SocialItem>
+                  <SocialLink href="#"><Icon iconId="linkedin" width={25} height={25} viewBox={'0 0 25 25'}/></SocialLink>
+                </SocialItem>
+                <SocialItem>
+                  <SocialLink href="#"><Icon iconId="github" width={25} height={25} viewBox={'0 0 25 25'}/></SocialLink>
+                </SocialItem>
+                <SocialItem>
+                  <SocialLink href="#"><Icon iconId="youtube" width={25} height={25} viewBox={'0 0 25 25'}/></SocialLink>
+                </SocialItem>
+              </SocialList>
             </FlexContainer>
           </FlexWrapper>
           <StyledMyForm action="">
-            <AboutField>Your name:</AboutField>
-            <Field/>
-            <AboutField>Your email address:</AboutField>
-            <Field type="email"/>
-            <AboutField>Tell about the project:</AboutField>
-            <Field/>
-            <StyledButton type="submit" background="transparent"><ShortText fontSize={30}>Send</ShortText> <Icon
-              iconId={'arrow-right'} width={25} height={25} viewBox="0 0 35 35"/>
+            <AboutField>Your name:
+              <Field name={'user-name'}/>
+            </AboutField>
+
+            <AboutField>Your email address:
+              <Field type="email" name={'user-email'}/>
+            </AboutField>
+
+
+            <AboutField>Tell about the project:
+              <Field name={'about-the-project'}/>
+            </AboutField>
+
+
+            <StyledButton type="submit" background="transparent">Send
+              <Icon iconId={'arrow-right'} width={30} height={30} viewBox="0 0 35 35"/>
             </StyledButton>
 
           </StyledMyForm>
@@ -39,25 +59,31 @@ export const Connect = () => {
   )
 }
 
+const SocialList = styled.ul`
+    display: flex;
+    gap: 50px;
+`
+
+const SocialItem = styled.li``
+
+const SocialLink = styled.a``
+
 const StyledConnect = styled.section`
     width: 100%;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: ${theme.colors.thirdBg};
 `
 
 const StyledButton = styled(Button)`
     padding: 40px 0 0 0;
     font-size: 30px;
+    color: ${theme.colors.accent};
     display: flex;
     gap: 40px;
-    color: #676cdb;
-    //    
-    //svg {
-    //    text-align: center;
-    //}
+    align-items: center;
 `
 
 const StyledMyForm = styled.form`
-    padding-left: 8.2%;
+    padding-left: 8%;
     width: 50%;
     display: flex;
     align-items: flex-start;
@@ -74,7 +100,7 @@ const Field = styled.input`
     background-color: transparent;
     border: none;
     border-bottom: 2px solid #fff;
-    color: white;
+    color: ${theme.colors.font};
     padding: 10px 0;
 `
 

@@ -3,6 +3,7 @@ import photo from '../../assets/images/man.jpg'
 import {Icon} from '../icon/Icon'
 import {FlexWrapper} from '../FlexWrapper'
 import {FlexContainer} from '../container/Container'
+import {theme} from '../../styles/Theme'
 
 export const Slider = () => {
   return (
@@ -10,15 +11,15 @@ export const Slider = () => {
       <Slide>
         <FlexWrapper>
           <Photo src={photo} alt="photo of the commentator"/>
-          <FlexWrapper direction={'column'}>
-            <QuoteComponent/>
+          <FlexWrapper direction={'column'} justify="flex-end">
+            <Quote/>
             <Comment>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a,
               mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
               tellus elit
               sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad
               litora torquent
             </Comment>
-            <FlexContainer padding="0 0 0 27px">
+            <FlexContainer margin="30px 0 0 27px">
               <Icon iconId={'arrow-right'} transform="180" width={40} height={40} viewBox="0 0 40 40"/>
               <Icon iconId={'arrow-right'} width={40} height={40} viewBox="0 0 40 40"/>
             </FlexContainer>
@@ -31,6 +32,8 @@ export const Slider = () => {
 
 
 const StyledSlider = styled.div`
+  max-width: 894px;
+    margin-right: 9%;
 `
 
 
@@ -40,24 +43,20 @@ const Slide = styled.div`
 
 const Photo = styled.img`
     object-fit: cover;
-    width: 389px;
-    height: 391px;
+    max-width: 390px;
+    min-height: 390px;
 `
 
 const Comment = styled.p`
-    padding: 0 109px 20px 15px;
-    max-height: 252px;
-`
-const Quote = styled.span`
-    font-size: 50px;
-    color: #c4c4c4;
     padding: 0 0 0 15px;
 `
-
-const QuoteComponent = () => {
-  return (
-    <Quote>
-      &#8220;
-    </Quote>
-  )
-}
+const Quote = styled.span`
+    &::before{
+        content: open-quote;
+    }
+    font-size: 100px;
+    color: #${theme.colors.quote};
+    padding: 0 0 0 15px;
+    font-family: "Playfair Display", sans-serif;
+    
+`

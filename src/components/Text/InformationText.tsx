@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {theme} from '../../styles/Theme'
 
 type InformationTextProps = {
   text: string
@@ -14,26 +15,29 @@ type InformationTextProps = {
 
 export const InformationText = (props: InformationTextProps) => {
   return (
-    <StyledInformationText maxHeight={props.maxHeight} lineHeight={props.lineHeight} maxWidth={props.maxWidth} fontFamily={props.fontFamily}>
+    <StyledInformationText maxHeight={props.maxHeight} lineHeight={props.lineHeight} maxWidth={props.maxWidth}
+                           fontFamily={props.fontFamily}>
       {props.reverseOrder ? (
-      <>
-        <StyledText sizeText={props.sizeData}>
-          {props.data}<br/>
-        </StyledText>
-        <DataText sizeData={props.sizeText}>
-          {props.text}
-        </DataText>
-      </>
+        <>
+          <StyledDataText sizeData={props.sizeData}>
+            {props.data}<br/>
+          </StyledDataText>
+          <StyledText sizeText={props.sizeText}>
+            {props.text}
+          </StyledText>
+
+
+        </>
       ) : (
-      <>
-        <StyledText sizeText={props.sizeText}>
-          {props.text}<br/>
-        </StyledText>
-        <DataText sizeData={props.sizeData}>
-          {props.data}
-        </DataText>
-      </>
-        )}
+        <>
+          <StyledText sizeText={props.sizeText}>
+            {props.text}<br/>
+          </StyledText>
+          <StyledDataText sizeData={props.sizeData}>
+            {props.data}
+          </StyledDataText>
+        </>
+      )}
     </StyledInformationText>
   )
 }
@@ -53,22 +57,28 @@ const StyledInformationText = styled.div<StyledCustomerStatisticsProps>`
     max-height: ${props => props.maxHeight}px;
     padding: ${props => props.padding};
     font-size: ${props => props.font};
-    font-family: ${props => props.fontFamily || "Playfair Display"};
+    font-family: ${props => props.fontFamily || 'Playfair Display'};
+    font-weight: 700;
+
 `
+
 
 type StyledTextProps = {
   sizeText: string
 }
 
-const StyledText = styled.h4<StyledTextProps>`
+const StyledText = styled.p<StyledTextProps>`
     font-size: ${props => props.sizeText};
+    line-height: 180%;
 `
 
-type DataTextProps = {
+type StyledDataTextProps = {
   sizeData: string
 }
 
-const DataText = styled.span<DataTextProps>`
+const StyledDataText = styled.span<StyledDataTextProps>`
     font-size: ${props => props.sizeData};
-    color: #676cdb;
+    color: ${theme.colors.accent};
+    line-height: 180%;
+
 `
