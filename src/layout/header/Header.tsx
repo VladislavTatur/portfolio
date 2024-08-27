@@ -16,9 +16,11 @@ export const Header = () => {
         <FlexWrapper wrap={"wrap"} justify="space-between" align={"center"}>
           <Logo/>
           <Menu menuItems={menuItems}/>
-          <Button background={"#676CDB"} padding={"10px 20px"}>
+          <Link href="#">
+            <Button background={"#676CDB"} padding={"10px 20px"}>
             Contact Me
           </Button>
+          </Link>
         </FlexWrapper>
       </Container>
 
@@ -30,3 +32,5 @@ const StyledHeader = styled.header`
     background-color: transparent;
     font-weight: 500;
 `
+
+const Link = styled.a``

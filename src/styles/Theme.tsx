@@ -8,5 +8,7 @@ export const theme = {
     font: "#fff",
     textSelection: "rgba(255, 255, 255, 0.5)",
     quote: "#c4c4c4",
+
+    hover: "rgba(103,108,219,0.3)"
   }
 }

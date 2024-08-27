@@ -11,7 +11,7 @@ export const Slider = () => {
       <Slide>
         <FlexWrapper>
           <Photo src={photo} alt="photo of the commentator"/>
-          <FlexWrapper direction={'column'} justify="flex-end">
+          <FlexWrapper direction={'column'} justify="space-between">
             <Quote/>
             <Comment>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a,
               mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
@@ -32,7 +32,7 @@ export const Slider = () => {
 
 
 const StyledSlider = styled.div`
-  max-width: 894px;
+    max-width: 894px;
     margin-right: 9%;
 `
 
@@ -48,15 +48,39 @@ const Photo = styled.img`
 `
 
 const Comment = styled.p`
-    padding: 0 0 0 15px;
+    padding: 0 5px 0 15px;
+    max-width: 490px;
+    max-height: 252px;
+    white-space: pre-wrap;
+    overflow-y: auto;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: ${theme.colors.accent};
+        border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: ${theme.colors.textSelection};
+    }
 `
 const Quote = styled.span`
-    &::before{
+    &::after {
         content: open-quote;
+        position: absolute;
+        left: 15px;
+        top: 14px;
     }
+
+    position: relative;
     font-size: 100px;
-    color: #${theme.colors.quote};
+    color: ${theme.colors.quote};
     padding: 0 0 0 15px;
     font-family: "Playfair Display", sans-serif;
-    
+
 `

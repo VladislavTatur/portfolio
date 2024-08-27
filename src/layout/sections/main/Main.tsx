@@ -14,8 +14,10 @@ import {theme} from '../../../styles/Theme'
 export const Main = () => {
   return (
     <StyledMain>
-        <Header/>
-        <Container>
+      <Header/>
+      <Container>
+
+
         <FlexContainer direction={'column'}>
           <Headlines2 font="Playfair Display" title={<>Hello!<br/> I’m Vladislav Tatur</>} size={90}/>
           <Text fontWeight={400} maxWidth="404px">I’am freelance <ShortText color={theme.colors.font}>web
@@ -23,18 +25,23 @@ export const Main = () => {
             web.</Text>
         </FlexContainer>
         <FlexContainer alignI={'center'}>
-          <Button background="#676cbd" width={'203px'} height={'64px'}>
-            <FlexWrapper align={'center'} justify={'center'} gap={10}>
-              <Icon iconId={'mail'} width={20} height={20} viewBox="0 0 20 20"/>
-              Mail Me
-            </FlexWrapper>
-          </Button>
-          <Button background="transparent" width={'201px'} height={'44px'}>
-            <FlexWrapper align={'center'} justify={'center'} gap={5}>
-              <Icon iconId={'download'} viewBox={'0 0 20 20'} width={20} height={20}/>
-             Download CV
-            </FlexWrapper>
-          </Button>
+          <a href="#">
+            <Button background="#676cbd" width={'203px'} height={'64px'}>
+              <FlexWrapper align={'center'} justify={'center'} gap={10}>
+                <Icon iconId={'mail'} width={20} height={20} viewBox="0 0 20 20"/>
+                Mail Me
+              </FlexWrapper>
+            </Button>
+          </a>
+          <a href="#">
+            <Button background="transparent" width={'201px'} height={'44px'}>
+              <FlexWrapper align={'center'} justify={'center'} gap={5}>
+                <Icon iconId={'download'} viewBox={'0 0 20 20'} width={20} height={20}/>
+                Download CV
+              </FlexWrapper>
+            </Button>
+          </a>
+
         </FlexContainer>
       <MyPhoto src={photo} alt="My photo"/>
         </Container>

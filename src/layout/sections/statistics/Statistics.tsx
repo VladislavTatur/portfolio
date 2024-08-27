@@ -13,7 +13,7 @@ export const Statistics = () => {
       <Container>
         <FlexWrapper>
           <Slider/>
-          <FlexContainer direction={'column'}>
+          <FlexContainer direction={'column'} maxWidth="194px">
             <InformationText fontFamily="Playfair Display" sizeText="1.5rem" sizeData="2.5rem" lineHeight={150}
                              text="Satisfaction Clients" data="100 %"/>
             <InformationText fontFamily="Playfair Display" sizeText="1.5rem" sizeData="2.5rem" lineHeight={120}

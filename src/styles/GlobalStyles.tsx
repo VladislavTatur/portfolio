@@ -14,7 +14,7 @@ export const GlobalStyle = createGlobalStyle`
         background-color: ${theme.colors.primaryBg};
         color: ${theme.colors.font};
         font-weight: 700;
-        //line-height: 180%;
+        line-height: 180%;
         margin: 0;
         font-family: "Poppins", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
