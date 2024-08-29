@@ -9,16 +9,17 @@ type FlexWrapperProps = {
   height?: string
   gap?: number
   textAlign?: string
-
+  grow?: number
 }
 
 export const FlexWrapper = styled.div<FlexWrapperProps>`
     text-align: ${props => props.textAlign};
     max-width: ${props => props.maxWidth};
     display: flex;
-    flex-direction: ${props => props.direction || "row"};
-    justify-content: ${props => props.justify || "flex-start"};
-    align-items: ${props => props.align || "stretch"};
-    flex-wrap: ${props => props.wrap || "nowrap"};
-    gap: ${props => props.gap || "0"}px;
+    flex-direction: ${props => props.direction || 'row'};
+    justify-content: ${props => props.justify || 'flex-start'};
+    align-items: ${props => props.align || 'stretch'};
+    flex-wrap: ${props => props.wrap || 'nowrap'};
+    gap: ${props => props.gap || '0'}px;
+    flex-grow: ${props => props.grow};
 `

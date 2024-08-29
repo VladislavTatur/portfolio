@@ -5,9 +5,10 @@ import {Logo} from '../../components/logo/Logo'
 import {Menu} from '../../components/menu/Menu'
 import {FlexWrapper} from '../../components/FlexWrapper'
 import {Container} from '../../components/container/Container'
+import { Link } from '../../components/Link'
 
 
-const menuItems = ["Home", "About", "Services"]
+const menuItems = ["Home", "About", "Works", "Services"]
 
 export const Header = () => {
   return (
@@ -33,4 +34,3 @@ const StyledHeader = styled.header`
     font-weight: 500;
 `
 
-const Link = styled.a``

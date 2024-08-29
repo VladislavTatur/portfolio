@@ -17,7 +17,6 @@ export const ShortText = styled.span<ShortTextProps>`
     line-height: ${props => props.lineHeight};
     max-width: ${props => props.maxWidth};
     text-align: ${props => props.textAlign};
-    line-height: normal;
     padding: ${props => props.padding};
     text-decoration: ${ props => props.textDecoration};
     font-weight: ${props => props.fontWeight};

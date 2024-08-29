@@ -5,59 +5,65 @@ import {FlexWrapper} from '../../../components/FlexWrapper'
 import styled from 'styled-components'
 import {Button} from '../../../components/button/Button'
 import {theme} from '../../../styles/Theme'
+import {Link} from '../../../components/Link'
 
 export const Connect = () => {
   return (
     <StyledConnect>
       <Container>
-        <FlexContainer>
+        <FlexWrapper wrap="wrap">
           <FlexWrapper direction={'column'} maxWidth="50%">
             <Headlines2 title="Let’s Connect" size={100}/>
-            <FlexContainer padding={'31px 0 0 0'}>
-              <SocialList>
-                <SocialItem>
-                  <SocialLink href="#"><Icon iconId="dribble" width={25} height={25} viewBox={'0 0 25 25'}/></SocialLink>
-                </SocialItem>
-                <SocialItem>
-                  <SocialLink href="#"><Icon iconId="upwork" width={25} height={25} viewBox={'0 0 25 25'}/></SocialLink>
-                </SocialItem>
-                <SocialItem>
-                  <SocialLink href="#"><Icon iconId="linkedin" width={25} height={25} viewBox={'0 0 25 25'}/></SocialLink>
-                </SocialItem>
-                <SocialItem>
-                  <SocialLink href="#"><Icon iconId="github" width={25} height={25} viewBox={'0 0 25 25'}/></SocialLink>
-                </SocialItem>
-                <SocialItem>
-                  <SocialLink href="#"><Icon iconId="youtube" width={25} height={25} viewBox={'0 0 25 25'}/></SocialLink>
-                </SocialItem>
-              </SocialList>
+            <FlexContainer margin={'31px 0 0 0'}>
+              <MenuSocial>
+                <SocialList>
+                  <SocialItem>
+                    <Link href="#"><Icon iconId="dribble" width={25} height={25} viewBox={'0 0 25 25'}/></Link>
+                  </SocialItem>
+                  <SocialItem>
+                    <Link href="#"><Icon iconId="upwork" width={25} height={25} viewBox={'0 0 25 25'}/></Link>
+                  </SocialItem>
+                  <SocialItem>
+                    <Link href="#"><Icon iconId="linkedin" width={25} height={25} viewBox={'0 0 25 25'}/></Link>
+                  </SocialItem>
+                  <SocialItem>
+                    <Link href="#"><Icon iconId="github" width={25} height={25} viewBox={'0 0 25 25'}/></Link>
+                  </SocialItem>
+                  <SocialItem>
+                    <Link href="#"><Icon iconId="youtube" width={25} height={25} viewBox={'0 0 25 25'}/></Link>
+                  </SocialItem>
+                </SocialList>
+              </MenuSocial>
             </FlexContainer>
           </FlexWrapper>
-          <StyledMyForm action="">
-            <AboutField>Your name:
-              <Field name={'user-name'}/>
-            </AboutField>
 
-            <AboutField>Your email address:
-              <Field type="email" name={'user-email'}/>
-            </AboutField>
+            <StyledMyForm action="">
+              <FlexContainer margin={'0 0 0 8%'} alignI="flex-start" justify={'center'} direction={'column'} width={"calc(100% - 8%)"}>
+              <AboutField>Your name:
+                <Field name={'user-name'}/>
+              </AboutField>
 
+              <AboutField>Your email address:
+                <Field type="email" name={'user-email'}/>
+              </AboutField>
 
-            <AboutField>Tell about the project:
-              <Field name={'about-the-project'}/>
-            </AboutField>
+              <AboutField>Tell about the project:
+                <Field name={'about-the-project'}/>
+              </AboutField>
 
+              <StyledButton type="submit" background="transparent">Send
+                <Icon iconId={'arrow-right'} width={30} height={30} viewBox="0 0 35 35"/>
+              </StyledButton>
+              </FlexContainer>
+            </StyledMyForm>
 
-            <StyledButton type="submit" background="transparent">Send
-              <Icon iconId={'arrow-right'} width={30} height={30} viewBox="0 0 35 35"/>
-            </StyledButton>
-
-          </StyledMyForm>
-        </FlexContainer>
+        </FlexWrapper>
       </Container>
     </StyledConnect>
   )
 }
+
+const MenuSocial = styled.nav``
 
 const SocialList = styled.ul`
     display: flex;
@@ -66,7 +72,6 @@ const SocialList = styled.ul`
 
 const SocialItem = styled.li``
 
-const SocialLink = styled.a``
 
 const StyledConnect = styled.section`
     width: 100%;
@@ -74,7 +79,7 @@ const StyledConnect = styled.section`
 `
 
 const StyledButton = styled(Button)`
-    padding: 40px 0 0 0;
+    margin: 40px 0 0 0;
     font-size: 30px;
     color: ${theme.colors.accent};
     display: flex;
@@ -83,12 +88,6 @@ const StyledButton = styled(Button)`
 `
 
 const StyledMyForm = styled.form`
-    padding-left: 8%;
-    width: 50%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
     font-weight: 500;
 
     label, input {
@@ -102,6 +101,7 @@ const Field = styled.input`
     border-bottom: 2px solid #fff;
     color: ${theme.colors.font};
     padding: 10px 0;
+    font-size: 1.2rem;
 `
 
 const AboutField = styled.label`

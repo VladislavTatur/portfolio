@@ -6,18 +6,20 @@ import {Connect} from './layout/sections/connect/Connect'
 import {Footer} from './layout/footer/Footer'
 import {Statistics} from './layout/sections/statistics/Statistics'
 import React from 'react'
+import {Works} from './layout/sections/works/Works'
 
 
 function App() {
   return (
     <div className="App">
 
-        <Main/>
-        <Skills/>
-        <Specialization/>
-        <Statistics/>
-        <Connect/>
-        <Footer/>
+      <Main/>
+      <Skills/>
+      <Specialization/>
+      <Works/>
+      <Statistics/>
+      <Connect/>
+      <Footer/>
 
     </div>
   )

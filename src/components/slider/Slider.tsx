@@ -9,7 +9,7 @@ export const Slider = () => {
   return (
     <StyledSlider>
       <Slide>
-        <FlexWrapper>
+        <FlexWrapper wrap="wrap">
           <Photo src={photo} alt="photo of the commentator"/>
           <FlexWrapper direction={'column'} justify="space-between">
             <Quote/>
@@ -55,6 +55,7 @@ const Comment = styled.p`
     overflow-y: auto;
     overflow-x: hidden;
     text-overflow: ellipsis;
+    position: relative;
 
     &::-webkit-scrollbar {
         width: 5px;
@@ -70,6 +71,7 @@ const Comment = styled.p`
     }
 `
 const Quote = styled.span`
+    margin: 8% 0;
     &::after {
         content: open-quote;
         position: absolute;

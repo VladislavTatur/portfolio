@@ -9,6 +9,7 @@ import {Headlines2} from '../../../components/headlines/Headlines2'
 import {ShortText} from '../../../components/Text/ShortText'
 import {Text} from '../../../components/Text/Text'
 import {theme} from '../../../styles/Theme'
+import {Link} from '../../../components/Link'
 
 
 export const Main = () => {
@@ -16,35 +17,31 @@ export const Main = () => {
     <StyledMain>
       <Header/>
       <Container>
-
-
-        <FlexContainer direction={'column'}>
-          <Headlines2 font="Playfair Display" title={<>Hello!<br/> I’m Vladislav Tatur</>} size={90}/>
+        <Headlines2 size={90}>Hello! <br/> I’m Vladislav Tatur</Headlines2>
           <Text fontWeight={400} maxWidth="404px">I’am freelance <ShortText color={theme.colors.font}>web
             developer</ShortText> based in Indonesia who loves to craft attractive design experiences for the
             web.</Text>
-        </FlexContainer>
-        <FlexContainer alignI={'center'}>
-          <a href="#">
+        <FlexContainer alignI={'center'} wrap="wrap">
+          <Link href="#">
             <Button background="#676cbd" width={'203px'} height={'64px'}>
               <FlexWrapper align={'center'} justify={'center'} gap={10}>
                 <Icon iconId={'mail'} width={20} height={20} viewBox="0 0 20 20"/>
                 Mail Me
               </FlexWrapper>
             </Button>
-          </a>
-          <a href="#">
+          </Link>
+          <Link href="#">
             <Button background="transparent" width={'201px'} height={'44px'}>
               <FlexWrapper align={'center'} justify={'center'} gap={5}>
                 <Icon iconId={'download'} viewBox={'0 0 20 20'} width={20} height={20}/>
                 Download CV
               </FlexWrapper>
             </Button>
-          </a>
+          </Link>
 
         </FlexContainer>
-      <MyPhoto src={photo} alt="My photo"/>
-        </Container>
+        <MyPhoto src={photo} alt="My photo"/>
+      </Container>
     </StyledMain>
   )
 }

@@ -11,7 +11,7 @@ export const Statistics = () => {
   return (
     <StyledStatistics>
       <Container>
-        <FlexWrapper>
+        <FlexWrapper wrap="wrap">
           <Slider/>
           <FlexContainer direction={'column'} maxWidth="194px">
             <InformationText fontFamily="Playfair Display" sizeText="1.5rem" sizeData="2.5rem" lineHeight={150}

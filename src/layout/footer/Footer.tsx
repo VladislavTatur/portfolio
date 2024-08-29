@@ -1,12 +1,16 @@
 import styled from 'styled-components'
 import {theme} from '../../styles/Theme'
+import {Container} from '../../components/container/Container'
 
 export const Footer = () => {
   return (
     <StyledFooter>
-      <TextFooter>
-        Thanks for watching
-      </TextFooter>
+      <Container padding="0">
+        <TextFooter>
+          Thanks for watching
+        </TextFooter>
+      </Container>
+
     </StyledFooter>
   )
 }
