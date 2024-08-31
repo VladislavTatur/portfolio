@@ -22,5 +22,3 @@ export const Button = styled.button<ButtonProps>`
         cursor: pointer;
     }
 `
-
-export const TextInButton = styled.span``

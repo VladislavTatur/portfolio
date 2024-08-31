@@ -11,7 +11,6 @@ export const Container = styled.div<ContainerProps>`
     max-width: 1200px;
     width: 100%;
     min-height: 100%;
-    outline: 1px solid red;
 `
 
 type FlexContainerProps = {

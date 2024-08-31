@@ -24,4 +24,5 @@ export const Skills = () => {
 const StyledSkills = styled.section`
     width: 100%;
     background-color: ${theme.colors.thirdBg};
+    display: flex;
 `

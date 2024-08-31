@@ -14,7 +14,7 @@ import {Link} from '../../../components/Link'
 
 export const Main = () => {
   return (
-    <StyledMain>
+    <StyledMain id="main">
       <Header/>
       <Container>
         <Headlines2 size={90}>Hello! <br/> I’m Vladislav Tatur</Headlines2>
@@ -22,7 +22,7 @@ export const Main = () => {
             developer</ShortText> based in Indonesia who loves to craft attractive design experiences for the
             web.</Text>
         <FlexContainer alignI={'center'} wrap="wrap">
-          <Link href="#">
+          <Link href="#connect">
             <Button background="#676cbd" width={'203px'} height={'64px'}>
               <FlexWrapper align={'center'} justify={'center'} gap={10}>
                 <Icon iconId={'mail'} width={20} height={20} viewBox="0 0 20 20"/>

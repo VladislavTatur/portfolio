@@ -5,7 +5,7 @@ import styled from 'styled-components'
 export const Logo = () => {
   return (
     <Qwe>
-    <a href="">
+    <a href="#main">
       <Icon viewBox={"0 0 185 50"} width={"185"} height="50" iconId='logo'/>
     </a>
     </Qwe>

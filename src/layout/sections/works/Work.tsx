@@ -22,8 +22,8 @@ export const Work = (props: WorkProps) => {
       <Description>
         <Headlines3>{props.headline}</Headlines3>
         <Text>{props.text}</Text>
-        <Link href={'#'}><Button>View Live</Button></Link>
-        <Link href={'#'}><Button background="trasparent">Github Repo</Button></Link>
+          <Link href={'#'}><Button>View Live</Button></Link>
+          <Link href={'#'}><Button background="trasparent">Github Repo</Button></Link>
       </Description>
 
       <FlexContainer justify="space-around">
@@ -39,18 +39,17 @@ const StyledWork = styled.div`
     border-radius: 8px;
     background-color: ${theme.colors.primaryBg};
     box-shadow: 0 4px 4px 0 ${theme.colors.quote};
-    max-width: 388px;
+    max-width: 380px;
     width: 100%;
     margin-bottom: 20px;
 
-
     ${Link} {
-        margin-bottom: 23px;
+        margin-bottom: 25px;
     }
 
     ${Button} {
         width: 145px;
-        height: 43px;
+        height: 45px;
     }
 
     ${Link} {
@@ -64,7 +63,6 @@ const StyledWork = styled.div`
 const Image = styled.img`
     padding-top: 16px;
     border-radius: 24px;
-
 `
 
 const Headlines3 = styled.h3`

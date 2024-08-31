@@ -9,7 +9,7 @@ import {theme} from '../../../styles/Theme'
 
 export const Statistics = () => {
   return (
-    <StyledStatistics>
+    <StyledStatistics id="reviews">
       <Container>
         <FlexWrapper wrap="wrap">
           <Slider/>

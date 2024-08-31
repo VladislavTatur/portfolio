@@ -10,6 +10,7 @@ type FlexWrapperProps = {
   gap?: number
   textAlign?: string
   grow?: number
+  alignC?: string
 }
 
 export const FlexWrapper = styled.div<FlexWrapperProps>`
@@ -19,6 +20,7 @@ export const FlexWrapper = styled.div<FlexWrapperProps>`
     flex-direction: ${props => props.direction || 'row'};
     justify-content: ${props => props.justify || 'flex-start'};
     align-items: ${props => props.align || 'stretch'};
+    align-content: ${props => props.alignC || "stretch"};
     flex-wrap: ${props => props.wrap || 'nowrap'};
     gap: ${props => props.gap || '0'}px;
     flex-grow: ${props => props.grow};

@@ -11,7 +11,7 @@ import {FlexWrapper} from '../../../components/FlexWrapper'
 
 export const Works = () => {
   return (
-    <StyledWorks>
+    <StyledWorks id="works">
       <Container>
         <FlexWrapper direction={'column'} wrap={'wrap'}>
           <Headlines2 color={`${theme.colors.accent}`} size={45}>My Works</Headlines2>

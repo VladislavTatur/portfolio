@@ -8,31 +8,32 @@ import {InformationText} from '../../../components/Text/InformationText'
 import {theme} from '../../../styles/Theme'
 
 export const Specialization = () => {
+
   return (
-    <StyledSpecialization>
+    <StyledSpecialization id="specialization">
       <Container>
-        <FlexContainer wrap="wrap" >
+        <FlexContainer wrap="wrap">
           <InformationText maxWidth={228} fontFamily="Playfair Display" text={'Years Experience Working'} data={'4 +'}
                            lineHeight={180} sizeText={'2rem'} sizeData={'5rem'} reverseOrder={true}/>
           <FlexContainer margin="0 0 0 60px" maxWidth="954px" direction={'column'} alignI="center" justify="center"
                          textAlign="center">
             <Headlines1>Developer and Designer, specialized in UI/UX and Web Developer</Headlines1>
             <FlexContainer gap={15} margin={'20px 0 0 0'} wrap="wrap">
-              <PaintingBox >
+              <PaintingBox>
                 <FlexContainer direction="column" justify={'flex-end'} alignI={'start'} minHeight="100%"
                                padding="0 0 35px 30px">
                   <Icon iconId="computer" height={30} width={30} viewBox="0 0 30 30"/>
                   <ShortText padding={'10px 0 0 0'} maxWidth={'50%'} textAlign="left">Front End Developer</ShortText>
                 </FlexContainer>
               </PaintingBox>
-              <PaintingBox >
+              <PaintingBox>
                 <FlexContainer direction="column" justify={'flex-end'} alignI={'start'} minHeight="100%"
                                padding="0 0 35px 30px">
                   <Icon iconId="paint" height={30} width={30} viewBox="0 0 30 30"/>
                   <ShortText padding={'10px 0 0 0'} maxWidth={'50%'} textAlign="left">UI/UX Designer</ShortText>
                 </FlexContainer>
               </PaintingBox>
-              <PaintingBox >
+              <PaintingBox>
                 <FlexContainer direction="column" justify={'flex-end'} alignI={'start'} minHeight="100%"
                                padding="0 0 35px 30px">
 
@@ -59,3 +60,4 @@ const Headlines1 = styled.h1`
     font-size: 2rem;
     max-width: 800px;
 `
+

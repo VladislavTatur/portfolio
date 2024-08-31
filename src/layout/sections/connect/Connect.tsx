@@ -9,11 +9,11 @@ import {Link} from '../../../components/Link'
 
 export const Connect = () => {
   return (
-    <StyledConnect>
+    <StyledConnect id="connect">
       <Container>
         <FlexWrapper wrap="wrap">
           <FlexWrapper direction={'column'} maxWidth="50%">
-            <Headlines2 title="Let’s Connect" size={100}/>
+            <Headlines2 size={100}>Let’s Connect</Headlines2>
             <FlexContainer margin={'31px 0 0 0'}>
               <MenuSocial>
                 <SocialList>
@@ -102,6 +102,7 @@ const Field = styled.input`
     color: ${theme.colors.font};
     padding: 10px 0;
     font-size: 1.2rem;
+    font-family: "Poppins", sans-serif;
 `
 
 const AboutField = styled.label`

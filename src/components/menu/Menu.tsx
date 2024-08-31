@@ -2,13 +2,18 @@ import React from 'react'
 import styled from 'styled-components'
 import {theme} from '../../styles/Theme'
 
-export const Menu = (props: { menuItems: Array<string> }) => {
+type MenuItemProps = {
+  name: string
+  link: string
+}
+
+export const Menu = (props: { menuItems: Array<MenuItemProps> }) => {
   return (
     <StyledMenu>
       <StyledMenuList>
         {props.menuItems.map((item, index) => {
           return <StyledMenuItem key={index}>
-            <StyledLink href="#">{item}
+            <StyledLink href={item.link}>{item.name}
             </StyledLink>
           </StyledMenuItem>
         })}
