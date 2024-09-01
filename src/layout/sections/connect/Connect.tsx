@@ -18,50 +18,56 @@ export const Connect = () => {
               <MenuSocial>
                 <SocialList>
                   <SocialItem>
-                    <Link href="#"><Icon iconId="dribble" width={25} height={25} viewBox={'0 0 25 25'}/></Link>
+                    <Link href="https://dribbble.com/"><Icon iconId="dribble" width={25} height={25}
+                                                             viewBox={'0 0 25 25'}/></Link>
                   </SocialItem>
                   <SocialItem>
-                    <Link href="#"><Icon iconId="upwork" width={25} height={25} viewBox={'0 0 25 25'}/></Link>
+                    <Link href="https://www.upwork.com/"><Icon iconId="upwork" width={25} height={25}
+                                                               viewBox={'0 0 25 25'}/></Link>
                   </SocialItem>
                   <SocialItem>
-                    <Link href="#"><Icon iconId="linkedin" width={25} height={25} viewBox={'0 0 25 25'}/></Link>
+                    <Link href="https://www.linkedin.com/"><Icon iconId="linkedin" width={25} height={25}
+                                                                 viewBox={'0 0 25 25'}/></Link>
                   </SocialItem>
                   <SocialItem>
-                    <Link href="#"><Icon iconId="github" width={25} height={25} viewBox={'0 0 25 25'}/></Link>
+                    <Link href="https://github.com/"><Icon iconId="github" width={25} height={25}
+                                                           viewBox={'0 0 25 25'}/></Link>
                   </SocialItem>
                   <SocialItem>
-                    <Link href="#"><Icon iconId="youtube" width={25} height={25} viewBox={'0 0 25 25'}/></Link>
+                    <Link href="https://www.youtube.com/"><Icon iconId="youtube" width={25} height={25}
+                                                                viewBox={'0 0 25 25'}/></Link>
                   </SocialItem>
                 </SocialList>
               </MenuSocial>
             </FlexContainer>
           </FlexWrapper>
-
-            <StyledMyForm action="">
-              <FlexContainer margin={'0 0 0 8%'} alignI="flex-start" justify={'center'} direction={'column'} width={"calc(100% - 8%)"}>
+          <StyledMyForm action="">
+            <FlexContainer margin={'0 0 0 8%'} padding={'0 4% 0 0'} alignI="flex-start" justify={'center'}
+                           direction={'column'} width={'calc(100% - 8%)'}>
               <AboutField>Your name:
                 <Field name={'user-name'}/>
               </AboutField>
-
               <AboutField>Your email address:
                 <Field type="email" name={'user-email'}/>
               </AboutField>
-
               <AboutField>Tell about the project:
                 <Field name={'about-the-project'}/>
               </AboutField>
-
-              <StyledButton type="submit" background="transparent">Send
+              <StyledButton type="submit" background={'transparent'}>Send
                 <Icon iconId={'arrow-right'} width={30} height={30} viewBox="0 0 35 35"/>
               </StyledButton>
-              </FlexContainer>
-            </StyledMyForm>
-
+            </FlexContainer>
+          </StyledMyForm>
         </FlexWrapper>
       </Container>
     </StyledConnect>
   )
 }
+
+const StyledConnect = styled.section`
+    width: 100%;
+    background-color: ${theme.colors.thirdBg};
+`
 
 const MenuSocial = styled.nav``
 
@@ -70,12 +76,12 @@ const SocialList = styled.ul`
     gap: 50px;
 `
 
-const SocialItem = styled.li``
+const SocialItem = styled.li`
+    transition: .2s;
 
-
-const StyledConnect = styled.section`
-    width: 100%;
-    background-color: ${theme.colors.thirdBg};
+    &:hover {
+        transform: translateY(-10px) scale(1.2);
+    }
 `
 
 const StyledButton = styled(Button)`
@@ -85,6 +91,14 @@ const StyledButton = styled(Button)`
     display: flex;
     gap: 40px;
     align-items: center;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &:active {
+        transform: translateY(2px);
+    }
 `
 
 const StyledMyForm = styled.form`

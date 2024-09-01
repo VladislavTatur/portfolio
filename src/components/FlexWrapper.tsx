@@ -15,7 +15,7 @@ type FlexWrapperProps = {
 
 export const FlexWrapper = styled.div<FlexWrapperProps>`
     text-align: ${props => props.textAlign};
-    max-width: ${props => props.maxWidth};
+    width: ${props => props.maxWidth};
     display: flex;
     flex-direction: ${props => props.direction || 'row'};
     justify-content: ${props => props.justify || 'flex-start'};

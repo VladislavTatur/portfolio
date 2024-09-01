@@ -2,11 +2,10 @@ import styled from 'styled-components'
 
 type ContainerProps = {
   padding?: string
-  margin?: string
 }
 
 export const Container = styled.div<ContainerProps>`
-    margin: ${props => props.margin || "0 auto"};
+    margin: 0 auto;
     padding: ${props => props.padding || "100px 0"};
     max-width: 1200px;
     width: 100%;
@@ -26,6 +25,8 @@ type FlexContainerProps = {
   minHeight?: string
   margin?: string
   width?: string
+  maxHeight?: string
+
 }
 
 export const FlexContainer = styled.div<FlexContainerProps>`
@@ -33,6 +34,7 @@ export const FlexContainer = styled.div<FlexContainerProps>`
     max-width: ${props => props.maxWidth};
     width: ${props => props.width};
     min-height: ${props => props.minHeight};
+    max-height: ${props => props.maxHeight};
     padding: ${props => props.padding};
     margin: ${props => props.margin};
     display: flex;

@@ -2,14 +2,15 @@ import {createGlobalStyle} from 'styled-components'
 import {theme} from './Theme'
 
 export const GlobalStyle = createGlobalStyle`
-    *, 
+    *,
     *::before,
     *::after {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+
     }
-    
+
     body {
         background-color: ${theme.colors.primaryBg};
         color: ${theme.colors.font};
@@ -22,16 +23,17 @@ export const GlobalStyle = createGlobalStyle`
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         font-size: 20px;
-    }
-    
+        
+
     a {
         text-decoration: none;
+        color: ${theme.colors.font};
     }
-    
+
     ul {
         list-style: none;
     }
-    
+
     button {
         background-color: unset;
         border: unset;

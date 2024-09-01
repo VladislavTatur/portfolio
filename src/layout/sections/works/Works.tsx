@@ -18,7 +18,7 @@ export const Works = () => {
           <Text color={`${theme.colors.font}`} fontWeight={500}>I have worked on many projects over the course of being a
             Web Developer, here are a few of my live,
             real-world projects</Text>
-          <FlexWrapper justify="space-between" wrap={'wrap'}>
+          <FlexWrapper justify="space-between" wrap={'wrap'} maxWidth="100%" gap={17}>
             <Work src={picture1} text="A live Geolocation app for finding tweets and twitter users around you."
                   headline="twinder"/>
             <Work src={picture2} text="A video streaming app with live Geolocation, for streaming events."

@@ -4,6 +4,7 @@ import {Icon} from '../icon/Icon'
 import {FlexWrapper} from '../FlexWrapper'
 import {FlexContainer} from '../container/Container'
 import {theme} from '../../styles/Theme'
+import {Link} from '../Link'
 
 export const Slider = () => {
   return (
@@ -13,15 +14,15 @@ export const Slider = () => {
           <Photo src={photo} alt="photo of the commentator"/>
           <FlexWrapper direction={'column'} justify="space-between">
             <Quote/>
-            <Comment>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a,
-              mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
-              tellus elit
-              sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad
-              litora torquent
+            <Comment>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem corporis eligendi hic impedit in molestias necessitatibus nihil quo rerum voluptatum. Ad, alias, consectetur cumque dolores doloribus eaque eius fuga impedit, iusto laudantium magnam non nulla quis similique suscipit! Accusamus corporis distinctio dolorum eveniet illum inventore ipsum laboriosam maiores minus necessitatibus nulla, perspiciatis quam reiciendis repellat velit voluptatem voluptates, voluptatum. Accusantium aperiam aspernatur beatae consequatur consequuntur cumque debitis delectus dolorem doloremque ea eveniet ex, excepturi exercitationem explicabo fugit harum hic inventore, itaque laboriosam laborum modi nostrum obcaecati praesentium repudiandae sapiente sint suscipit ut velit veniam veritatis. A blanditiis dignissimos placeat unde.
             </Comment>
             <FlexContainer margin="30px 0 0 27px">
-              <Icon iconId={'arrow-right'} transform="180" width={40} height={40} viewBox="0 0 40 40"/>
-              <Icon iconId={'arrow-right'} width={40} height={40} viewBox="0 0 40 40"/>
+              <Link href={'#'}>
+                <Icon iconId={'arrow-right'} transform="180" width={40} height={40} viewBox="0 0 40 40"/>
+              </Link>
+              <Link href={'#'}>
+                <Icon iconId={'arrow-right'} width={40} height={40} viewBox="0 0 40 40"/>
+              </Link>
             </FlexContainer>
           </FlexWrapper>
         </FlexWrapper>
@@ -36,9 +37,16 @@ const StyledSlider = styled.div`
     margin-right: 9%;
 `
 
-
 const Slide = styled.div`
 
+  ${Link}{
+      color: ${theme.colors.accent};
+      
+      &:hover {
+          transform: scale(1.2);
+      }
+  }
+  
 `
 
 const Photo = styled.img`
@@ -54,9 +62,9 @@ const Comment = styled.p`
     white-space: pre-wrap;
     overflow-y: auto;
     overflow-x: hidden;
-    text-overflow: ellipsis;
-    position: relative;
 
+    position: relative;
+    
     &::-webkit-scrollbar {
         width: 5px;
     }
@@ -72,12 +80,7 @@ const Comment = styled.p`
 `
 const Quote = styled.span`
     margin: 8% 0;
-    &::after {
-        content: open-quote;
-        position: absolute;
-        left: 15px;
-        top: 14px;
-    }
+
 
     position: relative;
     font-size: 100px;
@@ -85,4 +88,11 @@ const Quote = styled.span`
     padding: 0 0 0 15px;
     font-family: "Playfair Display", sans-serif;
 
+
+    &::after {
+        content: open-quote;
+        position: absolute;
+        left: 15px;
+        top: 14px;
+    }
 `

@@ -18,12 +18,12 @@ export const Main = () => {
       <Header/>
       <Container>
         <Headlines2 size={90}>Hello! <br/> I’m Vladislav Tatur</Headlines2>
-          <Text fontWeight={400} maxWidth="404px">I’am freelance <ShortText color={theme.colors.font}>web
-            developer</ShortText> based in Indonesia who loves to craft attractive design experiences for the
-            web.</Text>
+        <Text fontWeight={400} maxWidth="404px">I’am freelance <ShortText color={theme.colors.font}>web
+          developer</ShortText> based in Indonesia who loves to craft attractive design experiences for the
+          web.</Text>
         <FlexContainer alignI={'center'} wrap="wrap">
-          <Link href="#connect">
-            <Button background="#676cbd" width={'203px'} height={'64px'}>
+          <Link href="//http.vlad-1507@mail.ru" target="_blank">
+            <Button background={'#676cbd'} width={'203px'} height={'64px'}>
               <FlexWrapper align={'center'} justify={'center'} gap={10}>
                 <Icon iconId={'mail'} width={20} height={20} viewBox="0 0 20 20"/>
                 Mail Me
@@ -31,7 +31,7 @@ export const Main = () => {
             </Button>
           </Link>
           <Link href="#">
-            <Button background="transparent" width={'201px'} height={'44px'}>
+            <Button background={'transparent'} width={'201px'} height={'44px'}>
               <FlexWrapper align={'center'} justify={'center'} gap={5}>
                 <Icon iconId={'download'} viewBox={'0 0 20 20'} width={20} height={20}/>
                 Download CV
@@ -46,21 +46,38 @@ export const Main = () => {
   )
 }
 
+const StyledMain = styled.section`
+    width: 100%;
+    min-height: 100vh;
+    
+    @media ${theme.media.tablet} {
+        min-height: 100%;
+    }
+    
+    ${Text} {
+        @media ${theme.media.mobile} {
+            position: relative;
+        }
+    }
+
+`
 
 const MyPhoto = styled.img`
     width: 50%;
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
     position: absolute;
-    object-position: top -250px right 50%;
     top: 0;
     right: 0;
     opacity: 0.9;
     z-index: -1;
+
+    @media ${theme.media.tablet} {
+        width: 100%;
+        max-height: 40vh;
+        position: relative;
+    }
 `
 
-const StyledMain = styled.section`
-    width: 100%;
-    min-height: 100vh;
-`
+
 

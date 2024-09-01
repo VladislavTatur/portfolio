@@ -22,14 +22,11 @@ export const Work = (props: WorkProps) => {
       <Description>
         <Headlines3>{props.headline}</Headlines3>
         <Text>{props.text}</Text>
+        <FlexContainer alignI={"flex-end"} maxHeight={"100%"}>
           <Link href={'#'}><Button>View Live</Button></Link>
           <Link href={'#'}><Button background="trasparent">Github Repo</Button></Link>
+        </FlexContainer>
       </Description>
-
-      <FlexContainer justify="space-around">
-
-      </FlexContainer>
-
     </StyledWork>
 
   )
@@ -39,23 +36,22 @@ const StyledWork = styled.div`
     border-radius: 8px;
     background-color: ${theme.colors.primaryBg};
     box-shadow: 0 4px 4px 0 ${theme.colors.quote};
-    max-width: 380px;
-    width: 100%;
+    flex-grow: 1;
+    width: 344px;
     margin-bottom: 20px;
+
+    
 
     ${Link} {
         margin-bottom: 25px;
+        & + ${Link} {
+            margin-left: 18px;
+        }
     }
 
     ${Button} {
         width: 145px;
         height: 45px;
-    }
-
-    ${Link} {
-        & + ${Link} {
-            margin-left: 18px;
-        }
     }
 
 `
@@ -77,4 +73,5 @@ const Headlines3 = styled.h3`
 
 const Description = styled.div`
     padding: 16px 15px 20px;
+    max-height: 100%;
 `

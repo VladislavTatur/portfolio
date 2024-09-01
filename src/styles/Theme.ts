@@ -10,5 +10,10 @@ export const theme = {
     quote: "#c4c4c4",
 
     hover: "rgba(103,108,219,0.3)"
+  },
+
+  media: {
+    tablet: "screen and (max-width: 800px)",
+    mobile: "screen and (max-width: 576px)",
   }
 }

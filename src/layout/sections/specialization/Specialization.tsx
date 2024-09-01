@@ -18,27 +18,27 @@ export const Specialization = () => {
           <FlexContainer margin="0 0 0 60px" maxWidth="954px" direction={'column'} alignI="center" justify="center"
                          textAlign="center">
             <Headlines1>Developer and Designer, specialized in UI/UX and Web Developer</Headlines1>
-            <FlexContainer gap={15} margin={'20px 0 0 0'} wrap="wrap">
+            <FlexContainer gap={15} margin={'20px 0 0 0'} wrap="wrap" width="100%">
               <PaintingBox>
                 <FlexContainer direction="column" justify={'flex-end'} alignI={'start'} minHeight="100%"
-                               padding="0 0 35px 30px">
+                               padding="0 0 35px 30px" width="136px">
                   <Icon iconId="computer" height={30} width={30} viewBox="0 0 30 30"/>
-                  <ShortText padding={'10px 0 0 0'} maxWidth={'50%'} textAlign="left">Front End Developer</ShortText>
+                  <ShortText padding={'10px 0 0 0'} textAlign="left">Front End Developer</ShortText>
                 </FlexContainer>
               </PaintingBox>
               <PaintingBox>
                 <FlexContainer direction="column" justify={'flex-end'} alignI={'start'} minHeight="100%"
-                               padding="0 0 35px 30px">
+                               padding="0 0 35px 30px" width="136px">
                   <Icon iconId="paint" height={30} width={30} viewBox="0 0 30 30"/>
-                  <ShortText padding={'10px 0 0 0'} maxWidth={'50%'} textAlign="left">UI/UX Designer</ShortText>
+                  <ShortText padding={'10px 0 0 0'} textAlign="left">UI/UX Designer</ShortText>
                 </FlexContainer>
               </PaintingBox>
               <PaintingBox>
                 <FlexContainer direction="column" justify={'flex-end'} alignI={'start'} minHeight="100%"
-                               padding="0 0 35px 30px">
+                               padding="0 0 35px 30px" width="136px">
 
                   <Icon iconId="lightning" height={30} width={30} viewBox="0 0 30 30"/>
-                  <ShortText padding={'10px 0 0 0'} maxWidth={'50%'} textAlign="left">Branding Designer</ShortText>
+                  <ShortText padding={'10px 0 0 0'} textAlign="left">Branding Designer</ShortText>
                 </FlexContainer>
               </PaintingBox>
             </FlexContainer>
