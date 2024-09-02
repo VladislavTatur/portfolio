@@ -1,20 +1,20 @@
 import styled from 'styled-components'
 import {Work} from './Work'
 import {Container} from '../../../components/container/Container'
-import {Headlines2} from '../../../components/headlines/Headlines2'
 import {Text} from '../../../components/Text/Text'
 import {theme} from '../../../styles/Theme'
 import picture1 from './../../../assets/images/works/Rectangle 16.jpg'
 import picture2 from './../../../assets/images/works/Rectangle 17.jpg'
 import picture3 from './../../../assets/images/works/Rectangle 18.jpg'
 import {FlexWrapper} from '../../../components/FlexWrapper'
+import {font} from '../../../styles/Common'
 
 export const Works = () => {
   return (
     <StyledWorks id="works">
       <Container>
         <FlexWrapper direction={'column'} wrap={'wrap'}>
-          <Headlines2 color={`${theme.colors.accent}`} size={45}>My Works</Headlines2>
+          <Headline2>My Works</Headline2>
           <Text color={`${theme.colors.font}`} fontWeight={500}>I have worked on many projects over the course of being a
             Web Developer, here are a few of my live,
             real-world projects</Text>
@@ -33,4 +33,9 @@ export const Works = () => {
 }
 
 const StyledWorks = styled.section`
+`
+
+const Headline2 = styled.h2`
+    ${font({family: "'Playfair Display', sans-serif", weight: 700, lineHeight: 120, Fmin: 32, Fmax: 50, color: `${theme.colors.accent}`})}
+
 `

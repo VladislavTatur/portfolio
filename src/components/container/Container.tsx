@@ -1,7 +1,9 @@
 import styled from 'styled-components'
+import {theme} from '../../styles/Theme'
 
 type ContainerProps = {
   padding?: string
+  main?: boolean
 }
 
 export const Container = styled.div<ContainerProps>`
@@ -10,6 +12,10 @@ export const Container = styled.div<ContainerProps>`
     max-width: 1200px;
     width: 100%;
     min-height: 100%;
+    
+    @media ${theme.media.tablet} {
+        padding: ${props => props.main? "0 0 50px" : "50px 0"};
+    }
 `
 
 type FlexContainerProps = {

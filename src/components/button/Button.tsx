@@ -7,7 +7,7 @@ type ButtonProps = {
   width?: string;
   height?: string;
   padding?: string
-
+  border?: string
 }
 
 export const Button = styled.button<ButtonProps>`
@@ -17,7 +17,12 @@ export const Button = styled.button<ButtonProps>`
     width: ${props => props.width};
     height: ${props => props.height};
     font-size: 20px;
-    
+    border: ${props => props.border || 'none'};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
     &:hover {
         cursor: pointer;
     }

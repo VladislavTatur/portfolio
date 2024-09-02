@@ -7,14 +7,14 @@ import {theme} from '../../../styles/Theme'
 export const Skills = () => {
   return (
     <StyledSkills>
-      <Container padding={"59px 25px"}>
-      <FlexContainer alignI={'center'} justify={'space-between'} wrap={'wrap'}>
-        <Skill iconId={'figma'}/>
-        <Skill iconId={'html'}/>
-        <Skill iconId={'css'}/>
-        <Skill iconId={'sass'}/>
-        <Skill iconId={'react'}/>
-      </FlexContainer>
+      <Container padding={'59px 25px'}>
+        <FlexContainer alignI={'center'} justify={'space-between'}>
+          <Skill iconId={'figma'}/>
+          <Skill iconId={'html'}/>
+          <Skill iconId={'css'}/>
+          <Skill iconId={'sass'}/>
+          <Skill iconId={'react'}/>
+        </FlexContainer>
       </Container>
     </StyledSkills>
   )
@@ -24,5 +24,25 @@ export const Skills = () => {
 const StyledSkills = styled.section`
     width: 100%;
     background-color: ${theme.colors.thirdBg};
-    display: flex;
+    white-space: nowrap;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+
+    ${Container} {
+        @media ${theme.media.tablet} {
+            display: flex;
+            width: fit-content;
+            padding: 60px;
+        }
+    }
+}
+
+${FlexContainer} {
+    @media ${theme.media.tablet} {
+        gap: 70px;
+    }
+}
 `

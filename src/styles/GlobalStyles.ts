@@ -14,7 +14,7 @@ export const GlobalStyle = createGlobalStyle`
     body {
         background-color: ${theme.colors.primaryBg};
         color: ${theme.colors.font};
-        font-weight: 700;
+        font-weight: 400;
         line-height: 180%;
         margin: 0;
         font-family: "Poppins", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -23,19 +23,18 @@ export const GlobalStyle = createGlobalStyle`
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         font-size: 20px;
-        
 
-    a {
-        text-decoration: none;
-        color: ${theme.colors.font};
-    }
 
-    ul {
-        list-style: none;
-    }
+        a {
+            text-decoration: none;
+            color: ${theme.colors.font};
+        }
 
-    button {
-        background-color: unset;
-        border: unset;
-    }
-`
+        ul {
+            list-style: none;
+        }
+
+        button {
+            background-color: unset;
+            border: unset;
+        }`

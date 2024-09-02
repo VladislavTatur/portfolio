@@ -1,11 +1,11 @@
 import {Container, FlexContainer} from '../../../components/container/Container'
-import {Headlines2} from '../../../components/headlines/Headlines2'
 import {Icon} from '../../../components/icon/Icon'
 import {FlexWrapper} from '../../../components/FlexWrapper'
 import styled from 'styled-components'
 import {Button} from '../../../components/button/Button'
 import {theme} from '../../../styles/Theme'
 import {Link} from '../../../components/Link'
+import {font} from '../../../styles/Common'
 
 export const Connect = () => {
   return (
@@ -13,7 +13,7 @@ export const Connect = () => {
       <Container>
         <FlexWrapper wrap="wrap">
           <FlexWrapper direction={'column'} maxWidth="50%">
-            <Headlines2 size={100}>Let’s Connect</Headlines2>
+            <Headline2>Let’s Connect</Headline2>
             <FlexContainer margin={'31px 0 0 0'}>
               <MenuSocial>
                 <SocialList>
@@ -67,6 +67,11 @@ export const Connect = () => {
 const StyledConnect = styled.section`
     width: 100%;
     background-color: ${theme.colors.thirdBg};
+`
+
+const Headline2 = styled.h2`
+    ${font({family: "'Playfair Display', sans-serif", weight: 700, lineHeight: 120, Fmin: 50, Fmax: 100})}
+
 `
 
 const MenuSocial = styled.nav``

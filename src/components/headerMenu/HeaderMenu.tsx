@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import {Link} from '../Link'
 import {theme} from '../../styles/Theme'
+import {font} from '../../styles/Common'
 
 type MenuItemProps = {
   name: string
@@ -35,6 +36,8 @@ const StyledMenuList = styled.ul`
 `
 
 const StyledMenuItem = styled.li`
+    ${font({weight: 500, Fmin: 17, Fmax: 20})}
+
     &:hover {
         transform: scale(1.1);
     }
