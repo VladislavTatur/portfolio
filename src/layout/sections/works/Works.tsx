@@ -33,6 +33,11 @@ export const Works = () => {
 }
 
 const StyledWorks = styled.section`
+ ${Container}{
+     @media screen and (max-width: 1250px) {
+         padding: 0 20px 100px;
+     }
+ } 
 `
 
 const Headline2 = styled.h2`

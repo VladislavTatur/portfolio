@@ -11,17 +11,13 @@ export const Statistics = () => {
   return (
     <StyledStatistics id="reviews">
       <Container>
-        <FlexWrapper wrap="wrap">
           <Slider/>
-          <FlexContainer direction={'column'} maxWidth="194px">
-            <InformationText fontFamily="Playfair Display" sizeText="1.5rem" sizeData="2.5rem" lineHeight={150}
+            <InformationText fontFamily="Playfair Display" sizeText="1.5rem" sizeData="2.5rem" lineHeight={200}
                              text="Satisfaction Clients" data="100 %"/>
-            <InformationText fontFamily="Playfair Display" sizeText="1.5rem" sizeData="2.5rem" lineHeight={120}
+            <InformationText fontFamily="Playfair Display" sizeText="1.5rem" sizeData="2.5rem" lineHeight={200}
                              text="Clients On Worldwide" data="+ 80"/>
-            <InformationText fontFamily="Playfair Display" sizeText="1.5rem" sizeData="2.5rem" lineHeight={120}
+            <InformationText fontFamily="Playfair Display" sizeText="1.5rem" sizeData="2.5rem" lineHeight={200}
                              text="Projects Done" data="743"/>
-          </FlexContainer>
-        </FlexWrapper>
       </Container>
     </StyledStatistics>
   )
@@ -29,5 +25,17 @@ export const Statistics = () => {
 
 const StyledStatistics = styled.section`
     background-color: ${theme.colors.primaryBg};
+
+    ${Container} {
+
+        @media screen and (max-width: 1210px) {
+            padding: 25px 20px 90px;
+        }
+    }
+
+    @media ${theme.media.tablet} {
+        display: flex;
+        justify-content: center;
+    }
 `
 

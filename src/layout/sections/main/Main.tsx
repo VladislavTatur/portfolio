@@ -18,7 +18,7 @@ export const Main = () => {
       <Header/>
       <Container main>
         <MyPhoto src={photo} alt="My photo"/>
-        <MediaContainer>
+          <FlexContainer direction={'column'} minHeight="70vh" justify="center">
           <Headline2>Hello! <br/> I’m Vladislav Tatur</Headline2>
           <Text fontWeight={400} maxWidth="404px">I’am freelance <ShortText color={theme.colors.font}>web
             developer</ShortText> based in Indonesia who loves to craft attractive design experiences for the
@@ -39,14 +39,14 @@ export const Main = () => {
               </Button>
             </Link>
           </FlexWrapper>
-        </MediaContainer>
+          </FlexContainer>
+
       </Container>
     </StyledMain>
   )
 }
 
 const StyledMain = styled.section`
-    width: 100%;
     min-height: 100vh;
 
     @media ${theme.media.tablet} {
@@ -59,11 +59,13 @@ const StyledMain = styled.section`
             height: 50px;
         }
     }
-`
+    
+    ${FlexContainer} {
 
-const MediaContainer = styled.div`
-    @media ${theme.media.tablet} {
-        padding: 0 20px;
+        @media ${theme.media.tablet} {
+            padding: 0 20px;
+            min-height:100%
+        }
     }
 `
 

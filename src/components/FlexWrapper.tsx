@@ -24,4 +24,5 @@ export const FlexWrapper = styled.div<FlexWrapperProps>`
     flex-wrap: ${props => props.wrap || 'nowrap'};
     gap: ${props => props.gap || '0'}px;
     flex-grow: ${props => props.grow};
+    outline: 1px solid red;
 `

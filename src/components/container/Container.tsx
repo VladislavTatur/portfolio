@@ -10,8 +10,6 @@ export const Container = styled.div<ContainerProps>`
     margin: 0 auto;
     padding: ${props => props.padding || "100px 0"};
     max-width: 1200px;
-    width: 100%;
-    min-height: 100%;
     
     @media ${theme.media.tablet} {
         padding: ${props => props.main? "0 0 50px" : "50px 0"};

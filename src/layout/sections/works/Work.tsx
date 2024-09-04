@@ -43,7 +43,7 @@ const StyledWork = styled.div`
 
 
     ${Link} {
-        //margin-bottom: 25px;
+        margin-bottom: 25px;
 
         & + ${Link} {
             margin-left: 18px;
@@ -77,4 +77,6 @@ const Description = styled.div`
     padding: 16px 15px 20px;
     display: flex;
     flex-direction: column;
+    
+
 `
