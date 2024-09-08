@@ -14,14 +14,14 @@ export const MobileMenu = (props: { menuItems: Array<MenuItemProps> }) => {
   const onBurgerBtmClick = () => {setMenuIsOpen(!menuIsOpen)}
   return (
     <StyledMobileMenu>
-      <BurgerButton isOpen={menuIsOpen} onClick={onBurgerBtmClick}>
-        <span></span>
-      </BurgerButton>
-      <LogoWrapper>
-        <Link href={"#main"}>
-          <Icon viewBox={'0 0 185 50'} width={'185'} height="50" iconId="logo"/>
-        </Link>
-      </LogoWrapper>
+        <BurgerButton isOpen={menuIsOpen} onClick={onBurgerBtmClick}>
+          <span></span>
+        </BurgerButton>
+        <LogoWrapper>
+          <Link href={"#main"}>
+            <Icon viewBox={'0 0 185 50'} width={'185'} height="50" iconId="logo"/>
+          </Link>
+        </LogoWrapper>
       <MobileMenuPopup isOpen={menuIsOpen} onClick={() => setMenuIsOpen(false)}>
         <ul>
           {props.menuItems.map((item, index) => {
@@ -51,15 +51,16 @@ const StyledMobileMenu = styled.nav`
 
 const LogoWrapper = styled.div`
     position: fixed;
-    top: 35px;
-    left: 30px;
+    top: 20px;
+    left: 15px;
     z-index: 9999;
 `
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
     position: fixed;
-    top: 25px;
-    right: 20px;
+    
+    top: 15px;
+    right: 15px;
     width: 60px;
     height: 60px;
     z-index: 9999;

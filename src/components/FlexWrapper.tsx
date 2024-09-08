@@ -5,17 +5,19 @@ type FlexWrapperProps = {
   justify?: string
   align?: string
   wrap?: string
-  maxWidth?: string
+  width?: string
   height?: string
   gap?: number
   textAlign?: string
   grow?: number
   alignC?: string
+  shrink?: number
+  flex?: string | number
 }
 
 export const FlexWrapper = styled.div<FlexWrapperProps>`
     text-align: ${props => props.textAlign};
-    width: ${props => props.maxWidth};
+    width: ${props => props.width};
     display: flex;
     flex-direction: ${props => props.direction || 'row'};
     justify-content: ${props => props.justify || 'flex-start'};
@@ -24,5 +26,6 @@ export const FlexWrapper = styled.div<FlexWrapperProps>`
     flex-wrap: ${props => props.wrap || 'nowrap'};
     gap: ${props => props.gap || '0'}px;
     flex-grow: ${props => props.grow};
-    outline: 1px solid red;
+    flex-shrink: ${props => props.shrink};
+    flex: ${props => props.flex};
 `

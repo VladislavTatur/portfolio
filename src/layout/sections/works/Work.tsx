@@ -3,31 +3,34 @@ import {Text} from '../../../components/Text/Text'
 import {Link} from '../../../components/Link'
 import {Button} from '../../../components/button/Button'
 import {theme} from '../../../styles/Theme'
-import {FlexWrapper} from '../../../components/FlexWrapper'
 import {FlexContainer} from '../../../components/container/Container'
+import {useState} from 'react'
 
 type WorkProps = {
   src: string
   alt?: string
   headline?: string
   text?: string
+  isFilter?: boolean
 }
 
 export const Work = (props: WorkProps) => {
+  const [isBlurred, setIsBlurred] = useState(false)
   return (
     <StyledWork>
       <Description>
-        <Image src={props.src} alt={props.alt}/>
+          <Image isFilter={isBlurred} src={props.src} alt={props.alt} className="work-img"/>
         <Headlines3>{props.headline}</Headlines3>
         <Text>{props.text}</Text>
       </Description>
       <FlexContainer padding="0 0 23px 0" justify="space-evenly">
-        <Link href={'#'}><Button>View Live</Button></Link>
-        <Link href={'#'}><Button background="trasparent" border={`3px solid ${theme.colors.accent}`}>Github Repo</Button></Link>
+        <Link href={'#'}><Button onMouseLeave={() => setIsBlurred(false)} onMouseEnter={() => setIsBlurred(true)}>View Live</Button></Link>
+        <Link href={'#'}><Button onMouseLeave={() => setIsBlurred(false)} onMouseEnter={() => setIsBlurred(true)} background="trasparent" border={`3px solid ${theme.colors.accent}`}>Github Repo</Button></Link>
       </FlexContainer>
     </StyledWork>
   )
 }
+
 
 
 const StyledWork = styled.div`
@@ -54,13 +57,14 @@ const StyledWork = styled.div`
         width: 145px;
         height: 45px;
     }
-
 `
 
-const Image = styled.img`
+const Image = styled.img<{isFilter: boolean}>`
     padding-top: 16px;
     border-radius: 24px;
     margin-bottom: 16px;
+    transition: .4s;
+    filter: ${props => props.isFilter? 'hue-rotate(90deg)' : 'none'}
 `
 
 const Headlines3 = styled.h3`
@@ -77,6 +81,4 @@ const Description = styled.div`
     padding: 16px 15px 20px;
     display: flex;
     flex-direction: column;
-    
-
 `

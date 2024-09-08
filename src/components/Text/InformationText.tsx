@@ -7,21 +7,18 @@ type InformationTextProps = {
   lineHeight: number
   sizeText: string
   sizeData: string
-  maxWidth?: number
-  maxHeight?: number
   fontFamily?: string
 }
 
 export const InformationText = (props: InformationTextProps) => {
   return (
-    <StyledInformationText maxHeight={props.maxHeight} lineHeight={props.lineHeight} maxWidth={props.maxWidth}
-                           fontFamily={props.fontFamily}>
-          <StyledText sizeText={props.sizeText}>
-            {props.text}<br/>
-          </StyledText>
-          <StyledDataText sizeData={props.sizeData}>
-            {props.data}
-          </StyledDataText>
+    <StyledInformationText lineHeight={props.lineHeight} fontFamily={props.fontFamily}>
+        <StyledText sizeText={props.sizeText}>
+          {props.text}<br/>
+        </StyledText>
+        <StyledDataText sizeData={props.sizeData}>
+          {props.data}
+        </StyledDataText>
     </StyledInformationText>
   )
 }

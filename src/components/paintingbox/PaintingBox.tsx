@@ -13,7 +13,7 @@ type PaintingBoxProps = {
 export const PaintingBox = ({text, iconId}: PaintingBoxProps) => {
   return (
     <Box>
-      <FlexContainer direction="column" justify={'flex-end'} alignI={'start'} minHeight="100%"
+      <FlexContainer direction="column" justify={'flex-end'} alignI={'start'} height="100%"
                      padding="0 0 35px 30px" width="136px">
         <Icon iconId={iconId} height={30} width={30} viewBox="0 0 30 30" margin={"0 0 10px 0"}/>
         <ShortText fontWeight={700} textAlign="left">{text}</ShortText>
@@ -21,7 +21,6 @@ export const PaintingBox = ({text, iconId}: PaintingBoxProps) => {
     </Box>
   )
 }
-
 
 const Box = styled.div`
     width: 288px;

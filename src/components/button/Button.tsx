@@ -25,5 +25,6 @@ export const Button = styled.button<ButtonProps>`
 
     &:hover {
         cursor: pointer;
+        transform: scale(.9);
     }
 `

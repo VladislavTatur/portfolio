@@ -12,9 +12,8 @@ export const Connect = () => {
     <StyledConnect id="connect">
       <Container>
         <FlexWrapper wrap="wrap">
-          <FlexWrapper direction={'column'} maxWidth="50%">
-            <Headline2>Let’s Connect</Headline2>
-            <FlexContainer margin={'31px 0 0 0'}>
+          <FlexWrapper direction={'column'} grow={1}>
+            <Headline2>Let’s <br/> Connect</Headline2>
               <MenuSocial>
                 <SocialList>
                   <SocialItem>
@@ -37,13 +36,13 @@ export const Connect = () => {
                     <Link href="https://www.youtube.com/"><Icon iconId="youtube" width={25} height={25}
                                                                 viewBox={'0 0 25 25'}/></Link>
                   </SocialItem>
+
                 </SocialList>
               </MenuSocial>
-            </FlexContainer>
           </FlexWrapper>
           <StyledMyForm action="">
-            <FlexContainer margin={'0 0 0 8%'} padding={'0 4% 0 0'} alignI="flex-start" justify={'center'}
-                           direction={'column'} width={'calc(100% - 8%)'}>
+            <FlexContainer alignI="flex-start" justify={'center'}
+                           direction={'column'} grow={1} wrap={"wrap"}>
               <AboutField>Your name:
                 <Field name={'user-name'}/>
               </AboutField>
@@ -65,8 +64,19 @@ export const Connect = () => {
 }
 
 const StyledConnect = styled.section`
-    width: 100%;
     background-color: ${theme.colors.thirdBg};
+    
+    ${Container} {
+        @media ${theme.media.tablet} {
+            padding: 30px 20px 40px
+        }
+    }
+    
+    ${FlexWrapper} > *:first-child{
+        // @media ${theme.media.tablet} {
+        //     margin: 0 20px
+        // } 
+    }
 `
 
 const Headline2 = styled.h2`
@@ -74,23 +84,33 @@ const Headline2 = styled.h2`
 
 `
 
-const MenuSocial = styled.nav``
+const MenuSocial = styled.nav`
+  margin-top: 30px;
+    
+    @media ${theme.media.tablet} {
+        margin: 60px 0;
+    }
+`
 
 const SocialList = styled.ul`
     display: flex;
     gap: 50px;
+    
+    @media ${theme.media.mobile} {
+        gap: 0;
+        justify-content: space-between;
+    }
 `
 
 const SocialItem = styled.li`
     transition: .2s;
-
     &:hover {
         transform: translateY(-10px) scale(1.2);
     }
 `
 
 const StyledButton = styled(Button)`
-    margin: 40px 0 0 0;
+    margin-top: 40px;
     font-size: 30px;
     color: ${theme.colors.accent};
     display: flex;
@@ -108,9 +128,17 @@ const StyledButton = styled(Button)`
 
 const StyledMyForm = styled.form`
     font-weight: 500;
+    width: 350px;
+    display: flex;
+    flex-grow: 1;
+    margin: 0 30px;
 
-    label, input {
+   input, label {
         width: 100%;
+    }    
+    
+    @media ${theme.media.tablet} {
+        margin: 0;
     }
 `
 
@@ -128,3 +156,4 @@ const AboutField = styled.label`
     font-size: 30px;
     margin: 20px 20px 20px 0;
 `
+
