@@ -14,7 +14,7 @@ export const HeaderMenu = (props: { menuItems: Array<MenuItemProps> }) => {
     <StyledHeaderMenu>
       <StyledMenuList>
         {props.menuItems.map((item, index) => {
-          return <StyledMenuItem key={index}>
+          return <StyledMenuItem >
             <Link href={item.link}>{item.name}</Link>
           </StyledMenuItem>
         })}

@@ -10,10 +10,12 @@ import {theme} from '../../styles/Theme'
 import {MobileMenu} from '../../components/headerMenu/mobileMenu/MobileMenu'
 
 
-const menuItems = [{name: 'Home', link: '#main'}, {name: 'About', link: '#specialization'}, {
-  name: 'Works',
-  link: '#works'
-}, {name: 'Comments', link: '#reviews'}]
+const menuItems = [
+  {name: 'Home', link: '#main'},
+  {name: 'About', link: '#specialization'},
+  {name: 'Works', link: '#works'},
+  {name: 'Comments', link: '#reviews'}
+]
 
 export const Header = () => {
   return (

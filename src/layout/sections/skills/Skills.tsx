@@ -4,17 +4,26 @@ import {Skill} from './Skill/Skill'
 import React from 'react'
 import {theme} from '../../../styles/Theme'
 
+export type SkillsProps = {
+  iconId: string
+}
+
+const skillIcon: Array<SkillsProps> = [
+  {iconId: 'figma'},
+  {iconId: 'html'},
+  {iconId: 'css'},
+  {iconId: 'sass'},
+  {iconId: 'react'},
+]
+
 export const Skills = () => {
+
   return (
     <StyledSkills>
       <Container padding={'59px 25px'}>
-        <FlexContainer alignI={'center'} justify={'space-between'}>
-          <Skill iconId={'figma'}/>
-          <Skill iconId={'html'}/>
-          <Skill iconId={'css'}/>
-          <Skill iconId={'sass'}/>
-          <Skill iconId={'react'}/>
-        </FlexContainer>
+          <Skill
+          skills={skillIcon}
+          />
       </Container>
     </StyledSkills>
   )
